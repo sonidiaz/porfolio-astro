@@ -10,13 +10,11 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
-import LinkButton from "@/components/LinkButton.astro"
-import Link from "@/components/icons/Link.astro"
 ---
 
 <Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title="Porfolio de Nacho Díaz - Desarrollador y Programador Web con 10 años de experiencia"
+  description="Crea soluciones web tanto en frontend y backend. Aportando innovación y experiencia técnica a los equipos de desarrollo tecnológico"
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
@@ -31,7 +29,7 @@ import Link from "@/components/icons/Link.astro"
         Experiencia laboral
       </TitleSection>
       <Experience />
-      <div class="bg-gray-50 sm:py-1">
+      <div class="sm:py-1">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:text-center">
             <a
@@ -63,9 +61,23 @@ import Link from "@/components/icons/Link.astro"
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-7" />
-        Proyectos
+        Últimos Proyectos
       </TitleSection>
       <Projects />
+      <div class="mt-10 sm:py-1">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:text-center">
+            <a
+              target="_blank"
+              href={"https://nachodiaz.me/developer/"}
+              role="link"
+              class="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+          >
+              Ver más trabajos
+          </a>
+          </div>
+        </div>
+      </div>
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
