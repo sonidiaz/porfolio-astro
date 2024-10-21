@@ -1,0 +1,47 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Desarrollador Web y Frontend",
+    company: "Rtve.es",
+    description:
+      "Implementé un sistema con Vite y NodeJs para integrar componentes de React con TypeScript en páginas de noticias, creando catálogos interactivos y maquetando en HTML, CSS, JavaScript y PHP.",
+    link: "https://www.linkedin.com/in/sonidiaz/",
+  },
+  {
+    date: "Diciembre 2022",
+    title: "Desarrollador Web",
+    company: "AES",
+    description:
+    "Desarrollé un sitio web en WordPress y PHP, creando además un componente en React para filtrar empresas y profesionales asociados, mejorando la experiencia de búsqueda y filtrado.",
+    link: "https://www.linkedin.com/in/sonidiaz/",
+  },
+  {
+    date: "Septiembre 2022",
+    title: "Desarrollador Web",
+    company: "Citizens Legal",
+    description:
+    "Desarrollé una plataforma SaaS para la gestión de documentos en trámites de inmigración, integrando WordPress y la API de LearnDash, configurando servidores en Cloudways y automatizando procesos clave con Make.com.",
+    link: "https://www.linkedin.com/in/sonidiaz/",
+  },
+  {
+    date: "Diciembre 2022",
+    title: "Desarrollador Web",
+    company: "Berg Medical",
+    description:
+    "El sitio está desarrollado en ReactJs con NextJS y alojado en Vercel, con ramas main y develop sincronizadas en GitHub para un flujo CI/CD. Se utiliza SSR para mostrar productos de WooCommerce integrados con WordPress como CMS headless. La interfaz usa MUI y cuenta con un endpoint SMTP en NodeJs para el envío de formularios, además de un botón de WhatsApp que añade dinámicamente el nombre del producto al mensaje.",
+    link: "https://www.linkedin.com/in/sonidiaz/",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
