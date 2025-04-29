@@ -7,33 +7,22 @@ import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
 ---
 
-<div class="max-w-xl">
-  <!-- <div class="flex gap-4 mb-4">
-    <img
-      class="rounded-full shadow-lg size-16"
-      src="/midudev.webp"
-      alt={personalImageAlt}
-    />
-    <a
-      href="https://linkedin.com/in/midudev"
-      target="_blank"
-      rel="noopener"
-      class="flex items-center transition md:justify-center md:hover:scale-105"
-    >
-      <Badge>Disponible para trabajar</Badge>
-    </a>
-  </div> -->
-  <h1
-    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
-  >
-   Hola, Soy Nacho
-  </h1>
-  <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-  >
-  Con más de 10 años de experiencia desarrollando soluciones web tanto en frontend y backend. Aportando innovación y experiencia técnica a los equipos de desarrollo tecnológico. 
-  </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
+<div class="w-full">
+  <div class="w-full py-16">
+    <div class="flex w-12/12 justify-center mx-auto items-center gap-20">
+      <div class="flex flex-col">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">Adaptación al cambio tecnológico</h2>
+        <p
+          class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+        >
+        Ahora, tu valor ya no está en escribir código, sino en saber qué construir, cómo supervisarlo y cómo hacer que funcione para el negocio.
+        </p>
+      </div>
+      <img width="200" height="200" src="https://nachodiaz.me/wp-content/uploads/2023/08/26dd2663-e2b2-4096-bbb9-d1901ea33cdc.jpg" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-black-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
+    </div> 
+  </div> 
+
+  <!-- <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:nachodiaz8@gmail.com">
       <MailIcon class="size-4" />
       Contáctame
@@ -46,5 +35,5 @@ import SocialPill from "@/components/SocialPill.astro"
       <GitHub class="size-4" />
       GitHub
     </SocialPill>
-  </nav>
+  </nav> -->
 </div>
