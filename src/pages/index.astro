@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro"
 import AboutMe from "@/components/AboutMe.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
 import CodeIcon from "@/components/icons/Code.astro"
+import SupervisionIcon from "@/components/icons/Supervision.astro"
 import Experience from "@/components/Experience.astro"
 import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
@@ -28,14 +29,14 @@ const personalImageAlt = "Nacho Díaz"
     <SectionContainer id="aporte" class="py-16">
       <TitleSection>
       <Briefcase class="size-7" />
-        Lo que puedo aportar
+      ¿Cómo puedo impulsar tu proyecto?
       </TitleSection>
       <ul class="flex flex-col gap-6 md:flex-row">
         <li class="flex flex-col gap-4">
           <ProfileCheck class="size-7" />
           <h3 class="text-lg font-semibold leading-6">Estrategia y optimización de producto</h3>
           <p class="text-gray-600 dark:text-gray-400">
-            Aporto mi experiencia en el desarrollo de productos digitales para optimizar la estrategia y la toma de decisiones tecnológicas, asegurando la diferenciación en el mercado y el impacto en el negocio.
+            Aporto mi experiencia para ayudar a definir la estrategia tecnológica y a tomar decisiones informadas, con el fin de mejorar la posición en el mercado y el impacto en el negocio.
           </p>
         </li>
         <li class="flex flex-col gap-4">
@@ -46,10 +47,10 @@ const personalImageAlt = "Nacho Díaz"
           </p>
         </li>
         <li class="flex flex-col gap-4">
-          <CodeIcon class="size-7" />
+          <SupervisionIcon class="size-7" />
           <h3 class="text-lg font-semibold leading-6">Supervisión y validación de código</h3>
           <p class="text-gray-600 dark:text-gray-400">
-            Reviso y optimizo código generado por IA o equipos de desarrollo, asegurando calidad, rendimiento y buenas prácticas en el proceso de construcción digital.
+            Junto con la IA genero código mejor y mas rápido, mejorando los estándares de calidad y rendimiento en el proceso de construcción del producto.
           </p>
         </li>
         <!-- <li class="col-span-1 flex flex-col gap-4">
@@ -61,28 +62,28 @@ const personalImageAlt = "Nacho Díaz"
         </li> -->
       </ul>
     </SectionContainer>
-    <SectionContainer id="division" class="py-16 text-center">
+    <SectionContainer id="sobre-mi" class="py-16 text-center">
       <div class="flex w-full md:flex-row flex-col justify-center items-center h-full gap-10">
-        <div class="flex-1 h-full">
-          <p class="text-6xl text-right font-bold text-gray-600 dark:text-gray-300">
-            12 años,
-          </p>
-          <p class="text-6xl text-right font-bold text-gray-500 dark:text-gray-300">
-            2 países
-          </p>
-          <p class="text-6xl text-right font-bold text-gray-400 dark:text-gray-300">
-            3 ciudades, 
-          </p>
-          <p class="text-6xl text-right font-bold text-gray-300 dark:text-gray-300">
-            1 pueblo
-          </p>
-        </div>
         <div class="flex-1">
           <TitleSection>
             <ProfileCheck class="size-8" />
-            Sobre mí
+            ¿Quién soy?
           </TitleSection>
           <AboutMe />
+        </div>
+        <div class="flex-1 h-full">
+          <p class="text-6xl text-center font-bold text-gray-600 dark:text-gray-300">
+            12 años,
+          </p>
+          <p class="text-6xl text-center font-bold text-gray-500 dark:text-gray-300">
+            2 países
+          </p>
+          <p class="text-6xl text-center font-bold text-gray-400 dark:text-gray-300">
+            3 ciudades, 
+          </p>
+          <p class="text-6xl text-center font-bold text-gray-300 dark:text-gray-300">
+            1 pueblo
+          </p>
         </div>
       </div>
     </SectionContainer>
@@ -92,14 +93,13 @@ const personalImageAlt = "Nacho Díaz"
         <div class="mx-auto max-w-1xl">
           <TitleSection>
             <CodeIcon class="size-7" />
-            Mi trayectoria
+            ¿Cuál es mi trayectoria?
           </TitleSection>
             <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto">
               <li class="flex flex-col md:w-1/2 grow gap-4">
                 <p class="text-lg font-semibold leading-8 text-gray-900">12 años de experiencia en desarrollo web</p>
                 <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
-                  Desarrollo Frontend Senior con experiencia en React, JavaScript, HTML y CSS, asegurando la creación de interfaces
-                  intuitivas, accesibles y de alto rendimiento.
+                  Desarrollo Frontend Senior con experiencia en React, JavaScript, HTML y CSS, asegurando la creación de interfaces intuitivas, accesibles y de alto rendimiento.
                 </p>
               </li>
               <li class="flex flex-col md:w-1/2 grow gap-4">
@@ -151,10 +151,42 @@ const personalImageAlt = "Nacho Díaz"
       </div>
     </SectionContainer> 
 
+    <SectionContainer id="proyectos-destacados">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        En proceso...
+      </TitleSection>
+      <div class="bg-white pb-24 ">
+        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+          <img src="/img/pratodo.png" class="mx-auto w-full my-10 rounded-lg shadow-lg" alt="Pratodo" width="768" height="432">
+          <h3 class="text-left text-3xl font-semibold leading-8 text-gray-900 mb-6">PRATO_DO</h3>
+          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
+            Actualmente me encuentro desarrollando el nuevo sitio web de <span class="font-semibold">PRATO_DO</span>, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación.
+          </p>
+          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
+            El sitio será un CMS multilenguaje, flexible y autogestionable, que permita a PRATO_DO visibilizar sus proyectos, compartir conocimiento y experiencias, y contar con un espacio propio desde el cual generar su propio contenido, funcionará también como un canal de contacto con su comunidad y con posibles colaboraciones.
+          </p>
+          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
+            Más allá del desarrollo técnico, colaborar con PRATO_DO me permite aportar a proyectos que transforman la realidad desde lo cotidiano y que apuestan por una innovación social con impacto real. Ser parte de una iniciativa que busca generar cambios sostenibles, inclusivos y conscientes a través de la alimentación es muy gratificante.
+          </p>
+          <ul class="mt-10 flex flex-col gap-4">
+            <li class="flex items-center gap-2">
+              <span class="text-lg text-gray-900">#React, #NextJS, #Payload CMS, #PostgreSQL, #Node</span>
+            </li>
+            <!-- <li class="flex items-center gap-2">
+              <CodeIcon class="size-4" />
+              <span class="text-lg text-gray-900">Despliegue en Vercel</span>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </SectionContainer>
+
+
     <SectionContainer id="proyectos">
       <TitleSection>
         <CodeIcon class="size-7" />
-        Últimos Proyectos
+        Proyectos para RTVE
       </TitleSection>
       <Projects />
       <div class="my-10 sm:py-1">

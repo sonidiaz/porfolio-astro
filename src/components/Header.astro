@@ -1,19 +1,19 @@
 ---
 const navItems = [
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
-  },
-  {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
-  },
-  {
     title: "Sobre mí",
     label: "sobre-mi",
     url: "/#sobre-mi",
+  },
+  {
+    title: "Experiencia",
+    label: "trayectoria",
+    url: "/#trayectoria",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos-destacados",
   },
   // {
   //   title: "Contacto",
@@ -65,7 +65,7 @@ const navItems = [
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.3,
+      threshold: 0.9,
     })
 
     sections.forEach((section) => {
