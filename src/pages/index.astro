@@ -11,6 +11,10 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import TrayectoriaIcon from "@/components/icons/trayectoria.astro"
+import InProcessIcon from "@/components/icons/inProcess.astro"
+import EstrategiaIcon from "@/components/icons/Estrategia.astro"
+import InterfacesIcon from "@/components/icons/Interfaces.astro"
 
 const personalImageAlt = "Nacho Díaz"
 
@@ -33,14 +37,14 @@ const personalImageAlt = "Nacho Díaz"
       </TitleSection>
       <ul class="flex flex-col gap-6 md:flex-row">
         <li class="flex flex-col gap-4">
-          <ProfileCheck class="size-7" />
+          <EstrategiaIcon class="size-7" />
           <h3 class="text-lg font-semibold leading-6">Estrategia y optimización de producto</h3>
           <p class="text-gray-600 dark:text-gray-400">
             Aporto mi experiencia para ayudar a definir la estrategia tecnológica y a tomar decisiones informadas, con el fin de mejorar la posición en el mercado y el impacto en el negocio.
           </p>
         </li>
         <li class="flex flex-col gap-4">
-          <CodeIcon class="size-7" />
+          <InterfacesIcon class="size-7" />
           <h3 class="text-lg font-semibold leading-6">Desarrollo y mejora de interfaces</h3>
           <p class="text-gray-600 dark:text-gray-400">
             Diseño y optimizo experiencias digitales centradas en el usuario, asegurando que cada interacción sea efectiva, accesible y alineada con el propósito del producto.
@@ -92,7 +96,7 @@ const personalImageAlt = "Nacho Díaz"
       <div class="sm:py-8">
         <div class="mx-auto max-w-1xl">
           <TitleSection>
-            <CodeIcon class="size-7" />
+            <TrayectoriaIcon class="size-7" />
             ¿Cuál es mi trayectoria?
           </TitleSection>
             <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto">
@@ -153,21 +157,21 @@ const personalImageAlt = "Nacho Díaz"
 
     <SectionContainer id="proyectos-destacados">
       <TitleSection>
-        <CodeIcon class="size-7" />
-        En proceso...
+        <InProcessIcon class="size-7" />
+        Plataforma digital en proceso para PRATO_DO
       </TitleSection>
       <div class="bg-white pb-24 ">
         <div class="mx-auto max-w-1xl px-6 lg:px-8">
-          <img src="/img/pratodo.jpg" class="mx-auto w-full my-10 rounded-lg shadow-lg" alt="Pratodo" width="768" height="432">
-          <h3 class="text-left text-3xl font-semibold leading-8 text-gray-900 mb-6">PRATO_DO</h3>
+          <img src="/img/pratodo.jpg" class="mx-auto w-full my-10 rounded-lg shadow-lg" alt="Plataforma PRATO_DO" width="768" height="432">
+          <!-- <h3 class="text-left text-3xl font-semibold leading-8 text-gray-900 mb-6">PRATO_DO</h3> -->
           <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            Actualmente me encuentro desarrollando el nuevo sitio web de <span class="font-semibold">PRATO_DO</span>, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación.
+            Actualmente me encuentro desarrollando el sitio web de <span class="font-semibold">PRATO_DO</span>, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación.
           </p>
           <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            El sitio será un CMS multilenguaje, flexible y autogestionable, que permita a PRATO_DO visibilizar sus proyectos, compartir conocimiento y experiencias, y contar con un espacio propio desde el cual generar su propio contenido, funcionará también como un canal de contacto con su comunidad y con posibles colaboraciones.
+            El sitio será un CMS multilenguaje, flexible y autogestionable, que permita a <span class="font-semibold">PRATO_DO</span> visibilizar sus proyectos, compartir conocimiento y experiencias, y contar con un espacio propio desde el cual generar su propio contenido, funcionará también como un canal de contacto con su comunidad y con posibles colaboraciones.
           </p>
           <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            Más allá del desarrollo técnico, colaborar con PRATO_DO me permite aportar a proyectos que transforman la realidad desde lo cotidiano y que apuestan por una innovación social con impacto real. Ser parte de una iniciativa que busca generar cambios sostenibles, inclusivos y conscientes a través de la alimentación es muy gratificante.
+            Más allá del desarrollo técnico, colaborar con <span class="font-semibold">PRATO_DO</span> me permite aportar a proyectos que transforman la realidad desde lo cotidiano y que apuestan por una innovación social con impacto real. Ser parte de una iniciativa que busca generar cambios sostenibles, inclusivos y conscientes a través de la alimentación es muy gratificante.
           </p>
           <ul class="mt-10 flex flex-col gap-4">
             <li class="flex items-center gap-2">
