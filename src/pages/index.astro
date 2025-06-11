@@ -15,6 +15,12 @@ import TrayectoriaIcon from "@/components/icons/trayectoria.astro"
 import InProcessIcon from "@/components/icons/inProcess.astro"
 import EstrategiaIcon from "@/components/icons/Estrategia.astro"
 import InterfacesIcon from "@/components/icons/Interfaces.astro"
+import ReactIcon from "@/components/icons/React.astro"
+import NextJSIcon from "@/components/icons/NextJS.astro"
+// import PayloadCMSIcon from "@/components/icons/PayloadCMS.astro"
+// import PostgreSQLIcon from "@/components/icons/PostgreSQL.astro"
+// import NodeIcon from "@/components/icons/Node.astro"
+
 
 const personalImageAlt = "Nacho Díaz"
 
@@ -66,7 +72,7 @@ const personalImageAlt = "Nacho Díaz"
         </li> -->
       </ul>
     </SectionContainer>
-    <SectionContainer id="sobre-mi" class="py-16 text-center">
+    <SectionContainer id="sobre-mi" class="md:pt-[10rem] text-center">
       <div class="flex w-full md:flex-row flex-col justify-center items-center h-full gap-10">
         <div class="flex-1">
           <TitleSection>
@@ -91,6 +97,21 @@ const personalImageAlt = "Nacho Díaz"
         </div>
       </div>
     </SectionContainer>
+    <SectionContainer id="branding">
+      <div class="bg-white py-14 sm:py-32">
+        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Experiencia internacional en
+            consultoría, marketing y publicidad</h2>
+            <div class="mx-auto flex md:gap-0 gap-5 justify-center align-center mt-10 items-center sm:max-w lg:max-w-2xl">
+              <img class="max-h-12 w-full object-contain " src="https://nachodiaz.me/wp-content/uploads/2023/08/logoRTVE.png" alt="Transistor" width="165" height="48">
+              <img class="max-h-9 mt-5 mb-7 w-full object-contain " src="https://www.indracompany.com/sites/all/themes/custom/indracompany_bs/logo.png" alt="Reform" width="165" height="44">
+              <img class="max-h-8 w-full object-contain " src="https://raya.cl/wp-content/themes/raya/dist/img/logo-raya-dark.webp" alt="SavvyCal" width="165" height="42">
+            </div>
+          <h3 class="text-center text-sm text-gray-900 font-semibold mt-10 ">Santiago de Chile, Madrid y Barcelona
+          </h3>
+        </div>
+      </div>
+    </SectionContainer> 
     
     <SectionContainer id="trayectoria">
       <div class="sm:py-8">
@@ -138,56 +159,7 @@ const personalImageAlt = "Nacho Díaz"
         </div>
       </div>
     </SectionContainer>
-
-    <SectionContainer id="branding">
-      <div class="bg-white py-14 sm:py-32">
-        <div class="mx-auto max-w-1xl px-6 lg:px-8">
-          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Experiencia internacional en
-            consultoría, marketing y publicidad</h2>
-            <div class="mx-auto flex md:gap-0 gap-5 justify-center align-center mt-10 items-center sm:max-w lg:max-w-2xl">
-              <img class="max-h-12 w-full object-contain " src="https://nachodiaz.me/wp-content/uploads/2023/08/logoRTVE.png" alt="Transistor" width="165" height="48">
-              <img class="max-h-9 mt-5 mb-7 w-full object-contain " src="https://www.indracompany.com/sites/all/themes/custom/indracompany_bs/logo.png" alt="Reform" width="165" height="44">
-              <img class="max-h-8 w-full object-contain " src="https://raya.cl/wp-content/themes/raya/dist/img/logo-raya-dark.webp" alt="SavvyCal" width="165" height="42">
-            </div>
-          <h3 class="text-center text-sm text-gray-900 font-semibold mt-10 ">Santiago de Chile, Madrid y Barcelona
-          </h3>
-        </div>
-      </div>
-    </SectionContainer> 
-
-    <SectionContainer id="proyectos-destacados">
-      <TitleSection>
-        <InProcessIcon class="size-7" />
-        Plataforma digital en proceso para PRATO_DO
-      </TitleSection>
-      <div class="bg-white pb-24 ">
-        <div class="mx-auto max-w-1xl px-6 lg:px-8">
-          <img src="/img/pratodo.jpg" class="mx-auto w-full my-10 rounded-lg shadow-lg" alt="Plataforma PRATO_DO" width="768" height="432">
-          <!-- <h3 class="text-left text-3xl font-semibold leading-8 text-gray-900 mb-6">PRATO_DO</h3> -->
-          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            Actualmente me encuentro desarrollando el sitio web de <span class="font-semibold">PRATO_DO</span>, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación.
-          </p>
-          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            El sitio será un CMS multilenguaje, flexible y autogestionable, que permita a <span class="font-semibold">PRATO_DO</span> visibilizar sus proyectos, compartir conocimiento y experiencias, y contar con un espacio propio desde el cual generar su propio contenido, funcionará también como un canal de contacto con su comunidad y con posibles colaboraciones.
-          </p>
-          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            Más allá del desarrollo técnico, colaborar con <span class="font-semibold">PRATO_DO</span> me permite aportar a proyectos que transforman la realidad desde lo cotidiano y que apuestan por una innovación social con impacto real. Ser parte de una iniciativa que busca generar cambios sostenibles, inclusivos y conscientes a través de la alimentación es muy gratificante.
-          </p>
-          <ul class="mt-10 flex flex-col gap-4">
-            <li class="flex items-center gap-2">
-              <span class="text-lg text-gray-900">#React, #NextJS, #Payload CMS, #PostgreSQL, #Node</span>
-            </li>
-            <!-- <li class="flex items-center gap-2">
-              <CodeIcon class="size-4" />
-              <span class="text-lg text-gray-900">Despliegue en Vercel</span>
-            </li> -->
-          </ul>
-        </div>
-      </div>
-    </SectionContainer>
-
-
-    <SectionContainer id="proyectos">
+    <SectionContainer id="proyectos" class="md:pt-[8rem]">
       <TitleSection>
         <CodeIcon class="size-7" />
         Proyectos para RTVE
@@ -208,6 +180,45 @@ const personalImageAlt = "Nacho Díaz"
         </div>
       </div>
     </SectionContaine>
+    <SectionContainer id="proyectos-destacados" class="md:pt-[10rem]">
+      <TitleSection>
+        <InProcessIcon class="size-7" />
+        Desarrollo de CMS para PRATO_DO
+      </TitleSection>
+      <div class="bg-white pb-24 ">
+        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+          <img src="/img/pratodo.jpg" class="mx-auto w-full my-10 rounded-lg shadow-lg" alt="Plataforma PRATO_DO" width="768" height="432">
+          <!-- <h3 class="text-left text-3xl font-semibold leading-8 text-gray-900 mb-6">PRATO_DO</h3> -->
+          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
+            Actualmente me encuentro desarrollando el sitio web de <span class="font-semibold">PRATO_DO</span>, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación.
+          </p>
+          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
+            El sitio será un CMS multilenguaje, flexible y autogestionable, que permita a <span class="font-semibold">PRATO_DO</span> visibilizar sus proyectos, compartir conocimiento y experiencias, y contar con un espacio propio desde el cual generar su propio contenido, funcionará también como un canal de contacto con su comunidad y con posibles colaboraciones.
+          </p>
+          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
+            Más allá del desarrollo técnico, colaborar con <span class="font-semibold">PRATO_DO</span> me permite aportar a proyectos que transforman la realidad desde lo cotidiano y que apuestan por una innovación social con impacto real. Ser parte de una iniciativa que busca generar cambios sostenibles, inclusivos y conscientes a través de la alimentación es muy gratificante.
+          </p>
+          <a href="https://pratodo.org" target="_blank" class="mt-10 inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+            Ver Proyecto
+          </a>
+          <ul class="mt-10 flex flex-col gap-4">
+            <li class="flex items-center gap-2">
+              <!-- <ReactIcon class="size-4" />
+              <NextJSIcon class="size-4" /> -->
+              <span class="text-lg text-gray-900 flex items-center gap-2">
+                <!-- <PayloadCMSIcon class="size-4" />
+                <PostgreSQLIcon class="size-4" />
+                <NodeIcon class="size-4" /> -->
+              </span>
+            </li>
+            <!-- <li class="flex items-center gap-2">
+              <CodeIcon class="size-4" />
+              <span class="text-lg text-gray-900">Despliegue en Vercel</span>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </SectionContainer>
     <!-- <SectionContainer id="experiencia">
       <TitleSection>
         <Briefcase class="size-8" />
