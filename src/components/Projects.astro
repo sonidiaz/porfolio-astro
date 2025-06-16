@@ -1,134 +1,45 @@
 ---
+interface Props {
+  initialCategory?: string;
+}
+
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import React from "./icons/React.astro"
-import Css from "./icons/Css.astro"
-import Html from "./icons/Html.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import { CATEGORIES, PROJECTS, TAGS } from "../data/projects"
 
-const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-  REACT: {
-    name: "React.js",
-    class: "bg-[#077ea4] text-white",
-    icon: React,
-  },
-  CSS: {
-    name: "CSS",
-    class: "bg-[#077ea4] text-white",
-    icon: Css,
-  },
-  HTML: {
-    name: "HTML",
-    class: "bg-[#077ea4] text-white",
-    icon: Html,
-  },
-}
-const PROJECTS = [
-{
-    title: "Filtro de datos",
-    description:
-      "Desarrollo de filtro de datos para la noticia de ¿Quiénes son los cardenales que elegirán al nuevo papa? ",
-    link: "https://www.rtve.es/noticias/20250428/buscador-quienes-son-cardenales-elegiran-nuevo-papa/16471993.shtmll",
-    image: "https://img2.rtve.es/i/?w=1600&i=01745579621311.jpg",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Desarrollo de Landing",
-    description:
-      "Noticia con módulo de scrolling horizontal, parallax de figuras en canvas, personalización de la maquetación HTML y CSS de la página y conexión con API de noticias.",
-    link: "https://www.rtve.es/noticias/20241005/muertes-palestinos-victimas-guerra-gaza-israel/16274312.shtml",
-    image: "https://img.rtve.es/i/ano-guerra-gaza_01728057628100.jpg",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Frame a Frame",
-    description:
-      "Para los juegos olimpícos de Paris 2024 hubo la necesidad de crear un módulo para reproducir secuencias de imagenes con el scroll.",
-    link: "https://www.rtve.es/deportes/20240729/resumen-mountain-bike-juegos-olimpicos-paris-2024/16202036.shtml",
-    image: "https://img2.rtve.es/i/?w=1600&i=01722270780057.jpg",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Mapa de playas",
-    description:
-      "Maquetación de la interfaz UI/UX y desarrollo de la integración con la base de datos, incluyendo la interactividad del listado y las fichas de detalle.",
-    link: "https://www.rtve.es/noticias/20240725/gran-mapa-playas-espana-buscador/16164854.shtml",
-    image: "https://img2.rtve.es/i/?w=1600&i=01721834516789.jpg",
-    tags: [TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Videos en autoplay",
-    description:
-      "Reproducción automática y configuración de audio con React.",
-    link: "https://www.rtve.es/noticias/20231201/guerra-gaza-diario-testigo-incomodo/2462999.shtml",
-    image: "https://nachodiaz.me/wp-content/uploads/2024/01/gaza.gif",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Sitio web con scrollytelling con React y MapBox",
-    description:
-      "Minisitio desarrollado con React de 6 scrollytelling de texto, videos, ubicaciones y recorridos un un mapa con Mapbox. Gestión de reproducción de videos y audio.",
-    link: "https://www.rtve.es/noticias/20240306/11m-mapa-especial-regreso-peor-dia-nuestras-vidas/15995328.shtml",
-    image: "https://nachodiaz.me/wp-content/uploads/2024/06/img2.rtve_.jpg",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Scrollytelling Horizontal y GSAP",
-    description:
-      "Módulo para scrollytelling horizontal desarrollado con React y GSAP",
-    link: "https://www.rtve.es/noticias/20231215/visita-mercado-cena-navidad-aun-mas-cara-este-ano/2467151.shtml",
-    image: "/img/img-apertura.jpg",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Drag and drop y API de video",
-    description:
-      "Desarrollo de módulo interactivo con drag and drop y API de vídeo con React",
-    link: "https://www.rtve.es/noticias/20230928/productos-alimentos-mas-desperdiciados-espana/2456540.shtm",
-    image: "/img/desperdicios.gif",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-  {
-    title: "Desarrollo de componentes web de filtro de datos React",
-    description:
-      "Desarrollo de módulo interactivo para mostrar quienes son los diputados en el congreso.",
-    link: "https://www.rtve.es/noticias/20230817/composicion-congreso-diputados/2453798.shtml",
-    image: "/img/filtro-diputados.gif",
-    tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
-  },
-]
+const { initialCategory = "Infografías" } = Astro.props;
 ---
 
+<div class="mb-8 sticky top-16 z-10">
+  <nav class="flex flex-wrap gap-4 justify-center mb-8" id="categories-nav" data-initial-category={initialCategory}>
+    <!-- <button 
+      class={`category-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
+      data-category="all"
+    >
+      Todos
+    </button> -->
+    {CATEGORIES.map(category => (
+      <button
+        class={`category-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${category === initialCategory ? 'active' : ''}`}
+        data-category={category}
+      >
+        {category}
+      </button>
+    ))}
+  </nav>
+</div>
 
-<div class="flex flex-wrap justify-between gap-y-16">
+<div class="flex flex-wrap justify-between gap-y-16" id="projects-container">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-      <article class="flex flex-col md:w-1/3 px-1">
+    PROJECTS.map(({ image, title, description, tags, link, github, cat }) => (
+      <article class="flex flex-col md:w-1/3 px-3" data-category={cat}>
         <div class="w-full">
-          <div class="relative aspect-[2/1] flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-md sm:rounded-md md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-400 lg:hover:border-gray-400 lg:hover:bg-gray-800/50">
-            <img alt="" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-          </div>
+          {image !== '' && (
+            <div class="relative aspect-[2/1] flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform overflow-clip rounded-md sm:rounded-md md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-400 lg:hover:border-gray-400 lg:hover:bg-gray-800/50">
+              <img alt="" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+            </div>
+          )}
         </div>
 
         <div class="w-full md:max-w-lg">
@@ -161,7 +72,9 @@ const PROJECTS = [
                 {link && (
                   <LinkButton href={link}>
                     <Link class="size-4" />
-                    Ver la noticia
+                    {
+                      link.includes('rtve') ? 'Ver infografía' : 'Ver el proyecto'
+                    }
                   </LinkButton>
                 )}
               </footer>
@@ -172,5 +85,47 @@ const PROJECTS = [
   }
 </div>
 
+<script>
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  const projectsContainer = document.getElementById('projects-container');
+  const categoriesNav = document.getElementById('categories-nav');
+  const initialCategory = categoriesNav?.dataset.initialCategory;
 
+  if (projectsContainer && initialCategory) {
+    const projects = projectsContainer.getElementsByTagName('article');
 
+    // Filtrar proyectos según la categoría inicial
+    Array.from(projects).forEach((project: Element) => {
+      const category = (project as HTMLElement).dataset.category;
+      if (initialCategory !== 'all' && category !== initialCategory) {
+        (project as HTMLElement).style.display = 'none';
+      }
+    });
+
+    categoryButtons.forEach((button: Element) => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const selectedCategory = (button as HTMLElement).dataset.category;
+
+        Array.from(projects).forEach((project: Element) => {
+          if (selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory) {
+            (project as HTMLElement).style.display = '';
+          } else {
+            (project as HTMLElement).style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+</script>
+
+<style>
+  .category-btn.active {
+    background-color: #077ea4;
+    color: white;
+  }
+</style>
