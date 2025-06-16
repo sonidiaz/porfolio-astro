@@ -1,5 +1,22 @@
 import { NextJS, Tailwind, React, Css, Html } from "./icons"
 
+// Lista de tecnologías a resaltar
+const TECH_KEYWORDS = [
+  'React', 'Next.js', 'NextJS', 'CSS', 'HTML', 'JavaScript', 'TypeScript',
+  'Node.js', 'WordPress', 'Vue.js', 'Astro', 'Tailwind', 'Material UI', 'MUI',
+  'Redux', 'Redux Thunk', 'API', 'SSR', 'Figma', 'Make.com', 'Vercel'
+];
+
+// Función para resaltar tecnologías en el texto
+const highlightTechnologies = (text: string): string => {
+  let result = text;
+  TECH_KEYWORDS.forEach(tech => {
+    const regex = new RegExp(`\\b${tech}\\b`, 'g');
+    result = result.replace(regex, `<b>${tech}</b>`);
+  });
+  return result;
+};
+
 export const CATEGORIES = [
   "Infografías",
   "Desarrollo web",
@@ -39,7 +56,7 @@ export const PROJECTS = [
     cat: "Infografías",
     title: "Filtro de datos",
     description:
-      "Desarrollo de filtro de datos para la noticia de ¿Quiénes son los cardenales que elegirán al nuevo papa? ",
+      highlightTechnologies("Desarrollo de filtro de datos para la noticia de ¿Quiénes son los cardenales que elegirán al nuevo papa? Implementado con React y JavaScript."),
     link: "https://www.rtve.es/noticias/20250428/buscador-quienes-son-cardenales-elegiran-nuevo-papa/16471993.shtmll",
     image: "https://img2.rtve.es/i/?w=1600&i=01745579621311.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -49,7 +66,7 @@ export const PROJECTS = [
     cat: "Infografías",
     title: "Desarrollo de Landing",
     description:
-      "Noticia con módulo de scrolling horizontal, parallax de figuras en canvas, personalización de la maquetación HTML y CSS de la página y conexión con API de noticias.",
+      highlightTechnologies("Noticia con módulo de scrolling horizontal, parallax de figuras en canvas, personalización de la maquetación HTML y CSS de la página y conexión con API de noticias."),
     link: "https://www.rtve.es/noticias/20241005/muertes-palestinos-victimas-guerra-gaza-israel/16274312.shtml",
     image: "https://img.rtve.es/i/ano-guerra-gaza_01728057628100.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -129,7 +146,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "CMS para PRATO_DO",
     description:
-      "Actualmente me encuentro desarrollando el sitio web de PRATO_DO, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación.",
+      highlightTechnologies("Actualmente me encuentro desarrollando el sitio web de PRATO_DO usando WordPress y React, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación."),
     link: "https://pratodo.org",
     image: "/img/pratodo_do.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -139,7 +156,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "Citizens.legal",
     description:
-      "Plataforma web que permite a los usuarios armar y gestionar sus propios casos, cargando documentos y siguiendo contenido guiado. Se personalizaron reglas de privacidad y seguridad, y se automatizaron procesos clave, logrando ahorrar tiempo operativo y mejorar la experiencia del usuario.",
+      highlightTechnologies("Plataforma web desarrollada con WordPress y React que permite a los usuarios armar y gestionar sus propios casos, cargando documentos y siguiendo contenido guiado. Se personalizaron reglas de privacidad y seguridad con JavaScript, y se automatizaron procesos clave usando Make.com, logrando ahorrar tiempo operativo y mejorar la experiencia del usuario."),
     link: "",
     image: "/img/citizens.legal.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -149,7 +166,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "Comunidades Beforget",
     description:
-      "Integración con la API de Slack, desarrollo de página de filtrado por categorías y términos, y personalización del dashboard de usuario con carruseles para eventos, sesiones y proyectos. Creación de plugin personalizado para gestionar proyectos y sesiones, con filtros por términos ODS.",
+      highlightTechnologies("Integración con la API de Slack, desarrollo de página de filtrado por categorías y términos usando React, y personalización del dashboard de usuario con carruseles para eventos, sesiones y proyectos. Creación de plugin personalizado con WordPress para gestionar proyectos y sesiones, con filtros por términos ODS."),
     link: "https://thesocialcircle.es/login/",
     image: "/img/bfg-comunidades.gif",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -159,7 +176,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "Desarrollo del sitio web de la asociación.",
     description:
-      "Rediseño y desarrollo de un sitio web autoadministrable, orientado a su implementación en WordPress usando Divi y Divi Builder. Se desarrolló un componente en React para mostrar empresas y profesionales asociados, con filtrado por categorías, paginación en el frontend y modales con React Portals para ver detalles.",
+      highlightTechnologies("Rediseño y desarrollo de un sitio web autoadministrable, orientado a su implementación en WordPress usando Divi y Divi Builder. Se desarrolló un componente en React para mostrar empresas y profesionales asociados, con filtrado por categorías, paginación en el frontend y modales con React Portals para ver detalles."),
     link: "https://aesiguenza.es",
     image: "/img/aes.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -169,7 +186,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "BergMedical",
     description:
-      "Desarrollo de frontend con integración de WooCommerce usando WordPress como CMS headless. Renderizado SSR de productos, UI con MUI, y despliegue continuo automatizado (CI) con ramas main y develop. Implementación de endpoint en Node.js para envío de formularios vía SMTP y botón de WhatsApp con contenido dinámico basado en el producto.",
+      highlightTechnologies("Desarrollo de frontend con integración de WooCommerce usando WordPress como CMS headless. Renderizado SSR de productos, UI con MUI, y despliegue continuo automatizado (CI) con ramas main y develop. Implementación de endpoint en Node.js para envío de formularios vía SMTP y botón de WhatsApp con contenido dinámico basado en el producto."),
     link: "https://bergmedical-f3u5szigo-sonidiaz.vercel.app",
     image: "/img/bergmedical.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -179,7 +196,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "La Cabrera.eco",
     description:
-      "Sitio web desarrollado como plataforma para dar a conocer los servicios y productos que tiene LaCabrera.eco para fomentar y dinamizar la economía local de los pueblos y promover la sostenibilidad de comunidades locales .",
+      highlightTechnologies("Sitio web desarrollado con WordPress y React como plataforma para dar a conocer los servicios y productos que tiene LaCabrera.eco para fomentar y dinamizar la economía local de los pueblos y promover la sostenibilidad de comunidades locales."),
     link: "https://lacabrera.eco",
     image: "/img/la-cabrera.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -189,7 +206,7 @@ export const PROJECTS = [
     cat: "Experimentos",
     title: "Dashboard GlocalHack",
     description:
-      "Sistema de dashboard para visualizar proyectos ganadores seleccionados desde un canal de Slack. Desarrollado con Next.js, la API de Slack y React con TypeScript.",
+      highlightTechnologies("Sistema de dashboard para visualizar proyectos ganadores seleccionados desde un canal de Slack. Desarrollado con Next.js, la API de Slack y React con TypeScript."),
     link: "",
     image: "/img/glocalhack.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -199,7 +216,7 @@ export const PROJECTS = [
     cat: "Experimentos",
     title: "Weather App",
     description:
-      "Prototipo de aplicación del clima con visualización por ciudad. Gestión de estado con Redux y Redux Thunk para asincronía, rutas con React Router y visualización de datos con Recharts.",
+      highlightTechnologies("Prototipo de aplicación del clima con visualización por ciudad. Gestión de estado con Redux y Redux Thunk para asincronía, rutas con React Router y visualización de datos con Recharts."),
     link: "https://weather-data-app.vercel.app",
     image: "/img/wheatherapp.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -209,7 +226,7 @@ export const PROJECTS = [
     cat: "Experimentos",
     title: "BeforGet Sonrisa",
     description:
-      "Mini app interactiva que detecta tu sonrisa a través de la cámara y reproduce un video solo cuando estás sonriendo. Desarrollada con Vue.js y la librería de reconocimiento facial Jeeliz.",
+      highlightTechnologies("Mini app interactiva que detecta tu sonrisa a través de la cámara y reproduce un video solo cuando estás sonriendo. Desarrollada con Vue.js y la librería de reconocimiento facial Jeeliz."),
     link: "https://bfg-smile-ll5lf599n.now.sh",
     image: "/img/bfg-sonrisa.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -219,7 +236,7 @@ export const PROJECTS = [
     cat: "Experimentos",
     title: "Ya no me vienen con cuentos",
     description:
-      "Desarrollo de sitio web para campaña de publicidad.",
+      highlightTechnologies("Desarrollo de sitio web con HTML, CSS y JavaScript para campaña de publicidad."),
     link: "https://nachodiaz.me/trabajos/nomascuentos.cl",
     image: "/img/cuentos.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],

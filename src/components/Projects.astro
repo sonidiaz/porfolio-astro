@@ -11,7 +11,7 @@ import { CATEGORIES, PROJECTS, TAGS } from "../data/projects"
 const { initialCategory = "Infografías" } = Astro.props;
 ---
 
-<div class="mb-8 sticky top-16 z-10">
+<div class="mb-8 sticky top-14 md:top-16 z-10">
   <nav class="flex flex-wrap gap-4 justify-center mb-8" id="categories-nav" data-initial-category={initialCategory}>
     <!-- <button 
       class={`category-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
@@ -60,7 +60,7 @@ const { initialCategory = "Infografías" } = Astro.props;
                 ))}
               </ul> */}
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+            <div class="mt-2 text-gray-700 dark:text-gray-400" set:html={description}></div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
                 {github && (
                   <LinkButton href={github}>
@@ -111,6 +111,11 @@ const { initialCategory = "Infografías" } = Astro.props;
 
         const selectedCategory = (button as HTMLElement).dataset.category;
 
+        // Scroll suave al primer proyecto visible
+        const firstProject = Array.from(projects).find((project: Element) => {
+          return selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory;
+        });
+
         Array.from(projects).forEach((project: Element) => {
           if (selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory) {
             (project as HTMLElement).style.display = '';
@@ -118,6 +123,17 @@ const { initialCategory = "Infografías" } = Astro.props;
             (project as HTMLElement).style.display = 'none';
           }
         });
+
+        // Si encontramos un proyecto, hacemos scroll hasta él
+        if (firstProject) {
+          const yOffset = -200; // Ajuste para compensar el header fijo
+          const y = firstProject.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+          });
+        }
       });
     });
   }
