@@ -31,54 +31,14 @@ const personalImageAlt = "Nacho Díaz"
   description="Crea soluciones web tanto en frontend y backend. Aportando innovación y experiencia técnica a los equipos de desarrollo tecnológico"
 >
   <main class="px-4">
-    <SectionContainer class="py-16">
+    <SectionContainer class="pt-32 pb-12">
       <Hero>
       </slot>
     </Hero>
     </SectionContainer>
-    <SectionContainer id="aporte" class="py-16">
-      <TitleSection>
-      <Briefcase class="size-7" />
-      ¿Cómo puedo impulsar tu proyecto?
-      </TitleSection>
-      <ul class="flex flex-col gap-6 md:flex-row">
-        <li class="flex flex-col gap-4">
-          <EstrategiaIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Estrategia y optimización de producto</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Aporto mi experiencia para ayudar a definir la estrategia tecnológica y a tomar decisiones informadas, con el fin de mejorar la posición en el mercado y el impacto en el negocio.
-          </p>
-        </li>
-        <li class="flex flex-col gap-4">
-          <InterfacesIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Desarrollo y mejora de interfaces</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Diseño y optimizo experiencias digitales centradas en el usuario, asegurando que cada interacción sea efectiva, accesible y alineada con el propósito del producto.
-          </p>
-        </li>
-        <li class="flex flex-col gap-4">
-          <SupervisionIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Supervisión y validación de código</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Junto con la IA genero código mejor y mas rápido, mejorando los estándares de calidad y rendimiento en el proceso de construcción del producto.
-          </p>
-        </li>
-        <!-- <li class="col-span-1 flex flex-col gap-4">
-          <Briefcase class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Consultoría y mentoría tecnológica</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Formo y asesoro equipos para que integren nuevas tecnologías sin perder el criterio técnico y estratégico en la construcción de productos digitales.
-          </p>
-        </li> -->
-      </ul>
-    </SectionContainer>
-    <SectionContainer id="sobre-mi" class="md:pt-[10rem] text-center">
-      <div class="flex w-full md:flex-row flex-col justify-center items-center h-full gap-10">
+    <SectionContainer id="sobre-mi" class="md:pt-[10rem] text-center py-24">
+      <div class="flex w-full md:flex-row flex-col justify-start items-center h-full gap-10">
         <div class="flex-1">
-          <TitleSection>
-            <ProfileCheck class="size-8" />
-            ¿Quién soy?
-          </TitleSection>
           <AboutMe />
         </div>
         <div class="flex-1 h-full">
@@ -97,24 +57,9 @@ const personalImageAlt = "Nacho Díaz"
         </div>
       </div>
     </SectionContainer>
-    <SectionContainer id="branding">
-      <div class="bg-white py-14 sm:py-32">
-        <div class="mx-auto max-w-1xl px-6 lg:px-8">
-          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Experiencia internacional en
-            consultoría, marketing y publicidad</h2>
-            <div class="mx-auto flex md:gap-0 gap-5 justify-center align-center mt-10 items-center sm:max-w lg:max-w-2xl">
-              <img class="max-h-12 w-full object-contain " src="https://nachodiaz.me/wp-content/uploads/2023/08/logoRTVE.png" alt="Transistor" width="165" height="48">
-              <img class="max-h-9 mt-5 mb-7 w-full object-contain " src="https://www.indracompany.com/sites/all/themes/custom/indracompany_bs/logo.png" alt="Reform" width="165" height="44">
-              <img class="max-h-8 w-full object-contain " src="https://raya.cl/wp-content/themes/raya/dist/img/logo-raya-dark.webp" alt="SavvyCal" width="165" height="42">
-            </div>
-          <h3 class="text-center text-sm text-gray-900 font-semibold mt-10 ">Santiago de Chile, Madrid y Barcelona
-          </h3>
-        </div>
-      </div>
-    </SectionContainer> 
     
-    <SectionContainer id="trayectoria">
-      <div class="sm:py-8">
+    <SectionContainer id="trayectoria" class="py-24">
+      <div class="">
         <div class="mx-auto max-w-1xl">
           <TitleSection>
             <TrayectoriaIcon class="size-7" />
@@ -159,7 +104,22 @@ const personalImageAlt = "Nacho Díaz"
         </div>
       </div>
     </SectionContainer>
-    <SectionContainer id="proyectos" class="md:pt-[4rem]">
+    <SectionContainer id="branding" class="py-24">
+      <div class="bg-white">
+        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Experiencia internacional en
+            consultoría, marketing y publicidad</h2>
+            <div class="mx-auto flex md:gap-0 gap-5 justify-center align-center mt-10 items-center sm:max-w lg:max-w-2xl">
+              <img class="max-h-12 w-full object-contain " src="https://nachodiaz.me/wp-content/uploads/2023/08/logoRTVE.png" alt="Transistor" width="165" height="48">
+              <img class="max-h-9 mt-5 mb-7 w-full object-contain " src="https://www.indracompany.com/sites/all/themes/custom/indracompany_bs/logo.png" alt="Reform" width="165" height="44">
+              <img class="max-h-8 w-full object-contain " src="https://raya.cl/wp-content/themes/raya/dist/img/logo-raya-dark.webp" alt="SavvyCal" width="165" height="42">
+            </div>
+          <h3 class="text-center text-sm text-gray-900 font-semibold mt-10 ">Santiago de Chile, Madrid y Barcelona
+          </h3>
+        </div>
+      </div>
+    </SectionContainer> 
+    <SectionContainer id="proyectos" class="py-24">
       <h2
         class={`flex justify-center items-center mb-6  text-3xl font-semibold gap-x-3 text-black/80 dark:text-white`}
       >
@@ -167,81 +127,65 @@ const personalImageAlt = "Nacho Díaz"
       </h2>
 
       <Projects initialCategory="Infografías" />
-      <!-- <div class="my-10 sm:py-1">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:text-center">
-            <a
-              target="_blank"
-              href={"https://nachodiaz.me/developer/"}
-              role="link"
-              class="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-          >
-              ¿Quieres ver más?
-          </a>
-          </div>
-        </div>
-      </div> -->
     </SectionContaine>
-    <SectionContainer id="proyectos-destacados" class="md:pt-[10rem]">
-      <TitleSection>
-        <InProcessIcon class="size-7" />
-        Desarrollo de CMS para PRATO_DO
-      </TitleSection>
-      <div class="bg-white pb-24 ">
+    <SectionContainer id="proyectos-destacados" class="py-24">
+      <div class="bg-white md:flex align-top">
         <div class="mx-auto max-w-1xl px-6 lg:px-8">
-          <img src="/img/pratodo.jpg" class="mx-auto w-full my-10 rounded-lg shadow-lg" alt="Plataforma PRATO_DO" width="768" height="432">
-          <!-- <h3 class="text-left text-3xl font-semibold leading-8 text-gray-900 mb-6">PRATO_DO</h3> -->
+          <TitleSection>
+            <InProcessIcon class="size-7" />
+            Desarrollo de CMS para PRATO_DO
+          </TitleSection>
           <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            Actualmente me encuentro desarrollando el sitio web de <span class="font-semibold">PRATO_DO</span>, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación.
+            Actualmente estoy desarrollando el sitio web de PRATO_DO, una organización dedicada a la innovación alimentaria con enfoque social y sostenible. El sitio será un CMS multilenguaje, autogestionable y flexible, diseñado para visibilizar proyectos, compartir conocimiento y conectar con su comunidad. Esta colaboración me permite contribuir desde lo técnico a una iniciativa que busca generar un impacto real y transformador a través de la alimentación.
           </p>
-          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            El sitio será un CMS multilenguaje, flexible y autogestionable, que permita a <span class="font-semibold">PRATO_DO</span> visibilizar sus proyectos, compartir conocimiento y experiencias, y contar con un espacio propio desde el cual generar su propio contenido, funcionará también como un canal de contacto con su comunidad y con posibles colaboraciones.
-          </p>
-          <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            Más allá del desarrollo técnico, colaborar con <span class="font-semibold">PRATO_DO</span> me permite aportar a proyectos que transforman la realidad desde lo cotidiano y que apuestan por una innovación social con impacto real. Ser parte de una iniciativa que busca generar cambios sostenibles, inclusivos y conscientes a través de la alimentación es muy gratificante.
-          </p>
-          <a href="https://pratodo.org" target="_blank" class="mt-10 inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
+          
+          <a href="https://pratodo.org" target="_blank" class="mt-10 inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black hidden md:block">
             Ver Proyecto
           </a>
+        </div>
+        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+          <img src="/img/pratodo.jpg" class="mx-auto w-full rounded-lg shadow-lg" alt="Plataforma PRATO_DO" width="768" height="432">
           <ul class="mt-10 flex flex-col gap-4">
             <li class="flex items-center gap-2">
-              <!-- <ReactIcon class="size-4" />
-              <NextJSIcon class="size-4" /> -->
-              <span class="text-lg text-gray-900 flex items-center gap-2">
-                <!-- <PayloadCMSIcon class="size-4" />
-                <PostgreSQLIcon class="size-4" />
-                <NodeIcon class="size-4" /> -->
-              </span>
+              <ReactIcon class="size-4" />
+              <NextJSIcon class="size-4" />
             </li>
-            <!-- <li class="flex items-center gap-2">
-              <CodeIcon class="size-4" />
-              <span class="text-lg text-gray-900">Despliegue en Vercel</span>
-            </li> -->
           </ul>
+          <a href="https://pratodo.org" target="_blank" class="mt-10 inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black md:hidden">
+            Ver Proyecto
+          </a>
         </div>
       </div>
     </SectionContainer>
-    <!-- <SectionContainer id="experiencia">
+    <SectionContainer id="aporte" class="py-24">
       <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral
+      <Briefcase class="size-7" />
+      ¿Cómo puedo impulsar tu proyecto?
       </TitleSection>
-      <Experience />
-      <div class="sm:py-1">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:text-center">
-            <a
-              target="_blank"
-              href={"https://www.linkedin.com/in/sonidiaz"}
-              role="link"
-              class="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
-          >
-              Ver toda mi expeciencia
-          </a>
-          </div>
-        </div>
-      </div>
-    </SectionContainer> -->
+      <ul class="flex flex-col gap-6 md:flex-row">
+        <li class="flex flex-col gap-4">
+          <EstrategiaIcon class="size-7" />
+          <h3 class="text-lg font-semibold leading-6">Estrategia y optimización de producto</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Aporto mi experiencia para ayudar a definir la estrategia tecnológica y a tomar decisiones informadas, con el fin de mejorar la posición en el mercado y el impacto en el negocio.
+          </p>
+        </li>
+        <li class="flex flex-col gap-4">
+          <InterfacesIcon class="size-7" />
+          <h3 class="text-lg font-semibold leading-6">Desarrollo y mejora de interfaces</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Diseño y optimizo experiencias digitales centradas en el usuario, asegurando que cada interacción sea efectiva, accesible y alineada con el propósito del producto.
+          </p>
+        </li>
+        <li class="flex flex-col gap-4">
+          <SupervisionIcon class="size-7" />
+          <h3 class="text-lg font-semibold leading-6">Supervisión y validación de código</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Junto con la IA genero código mejor y mas rápido, mejorando los estándares de calidad y rendimiento en el proceso de construcción del producto.
+          </p>
+        </li>
+      </ul>
+    </SectionContainer>
   </div>
   </main>
 </Layout>

@@ -156,7 +156,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "Citizens.legal",
     description:
-      highlightTechnologies("Plataforma web desarrollada con WordPress y React que permite a los usuarios armar y gestionar sus propios casos, cargando documentos y siguiendo contenido guiado. Se personalizaron reglas de privacidad y seguridad con JavaScript, y se automatizaron procesos clave usando Make.com, logrando ahorrar tiempo operativo y mejorar la experiencia del usuario."),
+      highlightTechnologies("Plataforma web desarrollada con WordPress que permite a los usuarios armar y gestionar sus propios casos, cargando documentos y siguiendo contenido guiado. Se personalizaron reglas de privacidad y seguridad, se automatizaron procesos clave usando Make.com, logrando ahorrar tiempo operativo y mejorar la experiencia del usuario."),
     link: "",
     image: "/img/citizens.legal.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
