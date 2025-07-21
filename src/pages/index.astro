@@ -17,6 +17,7 @@ import EstrategiaIcon from "@/components/icons/Estrategia.astro"
 import InterfacesIcon from "@/components/icons/Interfaces.astro"
 import ReactIcon from "@/components/icons/React.astro"
 import NextJSIcon from "@/components/icons/NextJS.astro"
+import ContactForm from "@/components/ContactForm.astro"
 // import PayloadCMSIcon from "@/components/icons/PayloadCMS.astro"
 // import PostgreSQLIcon from "@/components/icons/PostgreSQL.astro"
 // import NodeIcon from "@/components/icons/Node.astro"
@@ -27,8 +28,8 @@ const personalImageAlt = "Nacho Díaz"
 ---
 
 <Layout
-  title="Porfolio de Nacho Díaz - Desarrollador y Programador Web con 10 años de experiencia"
-  description="Crea soluciones web tanto en frontend y backend. Aportando innovación y experiencia técnica a los equipos de desarrollo tecnológico"
+  title="Nacho Díaz | Alternativas honestas a las estrategias que combinen programación y la IA"
+  description="Desarrollador y programador web con 10 años de experiencia en desarrollo de frontend y backend. Aporto mi experiencia técnica, empatía y criterio para ayudar a equipos a crear productos coherentes, útiles y sostenibles."
 >
   <main class="px-4">
     <SectionContainer class="pt-32 pb-12">
@@ -43,13 +44,13 @@ const personalImageAlt = "Nacho Díaz"
         </div>
         <div class="flex-1 h-full">
           <p class="text-6xl text-center font-bold text-gray-600 dark:text-gray-300">
-            12 años,
+            12 años
           </p>
           <p class="text-6xl text-center font-bold text-gray-500 dark:text-gray-300">
             2 países
           </p>
           <p class="text-6xl text-center font-bold text-gray-400 dark:text-gray-300">
-            3 ciudades, 
+            3 ciudades
           </p>
           <p class="text-6xl text-center font-bold text-gray-300 dark:text-gray-300">
             1 pueblo
@@ -62,45 +63,53 @@ const personalImageAlt = "Nacho Díaz"
       <div class="">
         <div class="mx-auto max-w-1xl">
           <TitleSection>
-            <TrayectoriaIcon class="size-7" />
-            ¿Cuál es mi trayectoria?
+            <TrayectoriaIcon class="size-7 " />
+            Mi trayectoria en tecnología y productos digitales
           </TitleSection>
-            <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto">
+          <div class="pt-12">
+            <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto py-10">
               <li class="flex flex-col md:w-1/2 grow gap-4">
-                <p class="text-lg font-semibold leading-8 text-gray-900">12 años de experiencia en desarrollo web</p>
+                <p class="text-lg font-semibold leading-8 text-gray-900"> Desarrollo frontend con visión de usuario</p>
                 <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
-                  Desarrollo Frontend Senior con experiencia en React, JavaScript, HTML y CSS, asegurando la creación de interfaces intuitivas, accesibles y de alto rendimiento.
+                  Especializado en React, JavaScript, HTML y CSS, diseño e implemento interfaces intuitivas, accesibles y de alto rendimiento, siempre con foco en la experiencia real de quienes las usan.
                 </p>
               </li>
               <li class="flex flex-col md:w-1/2 grow gap-4">
-                <p class="text-lg font-semibold leading-8 text-gray-900">Experiencia en backend con Node.js, PHP y WordPress</p>
+                <p class="text-lg font-semibold leading-8 text-gray-900">Conexión entre frontend y backend</p>
                 <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
-                  Permitiendo desarrollar soluciones integrales que conectan el frontend con sistemas robustos y escalables.
+                  Tengo experiencia con Node.js, PHP y WordPress, lo que me permite integrar soluciones completas, conectando la lógica técnica con los sistemas y necesidades del negocio.
                 </p>
               </li>
             </ul>
             <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto py-10">
               <li class="flex flex-col md:w-1/2 grow gap-4">
-                <p class="text-lg font-semibold leading-8 text-gray-900">Liderazgo técnico en la implementación de componentes interactivos</p>
+                <p class="text-lg font-semibold leading-8 text-gray-900">Liderazgo técnico y storytelling interactivo</p>
                 <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
-                  Narrativas digitales e infografías dinámicas, optimizando la experiencia de usuario y el storytelling visual.
+                  He liderado la implementación de componentes interactivos para narrativas digitales e infografías, donde lo visual y lo técnico se integran para contar mejor una historia y generar impacto.
                 </p>
               </li>
               <li class="flex flex-col md:w-1/2 grow gap-4">
-                <p class="text-lg font-semibold leading-8 text-gray-900">Optimización de flujos de trabajo con IA y automatización</p>
+                <p class="text-lg font-semibold leading-8 text-gray-900">Automatización e integración con IA</p>
                 <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
-                  Mejorando la eficiencia en la entrega de proyectos y asegurando la calidad del código generado.
+                  Trabajo optimizando procesos con IA y herramientas de automatización, supervisando código generado por modelos y cuidando la calidad técnica. Esto acelera entregas sin perder control ni criterio.
                 </p>
               </li>
             </ul>
-            <ul class="flex flex-col md:w-1/2 gap-10 md:flex-row justify-start mb-10">
-              <li class="flex flex-col grow gap-4">
-                <p class="text-lg font-semibold leading-8 text-gray-900">Colaboración con equipos globales</p>
+            <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto py-10">
+              <li class="flex flex-col md:w-1/2 grow gap-4">
+                <p class="text-lg font-semibold leading-8 text-gray-900">Alineación entre equipos, producto y propósito</p>
                 <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
-                  Aportando una visión amplia y estratégica en la creación de productos digitales.
+                  Más allá de lo técnico, me involucro en los equipos desde la empatía, ayudando a alinear visión, prioridades y objetivos comunes, para que las ideas se concreten y generen valor real.
+                </p>
+              </li>
+              <li class="flex flex-col md:w-1/2 grow gap-4">
+                <p class="text-lg font-semibold leading-8 text-gray-900">Experiencia multicultural</p>
+                <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
+                  He colaborado con equipos en Santiago de Chile, Madrid, Barcelona y de forma remota desde distintos lugares. Esa diversidad me dio la flexibilidad y sensibilidad necesarias para aportar tanto en entornos ágiles como en procesos más estratégicos.
                 </p>
               </li>
             </ul>
+          </div>
         </div>
       </div>
     </SectionContainer>
@@ -130,20 +139,25 @@ const personalImageAlt = "Nacho Díaz"
     </SectionContaine>
     <SectionContainer id="proyectos-destacados" class="py-24">
       <div class="bg-white md:flex align-top">
-        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl px-6 lg:px-8">
           <TitleSection>
-            <InProcessIcon class="size-7" />
             Desarrollo de CMS para PRATO_DO
           </TitleSection>
           <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300 mb-6">
-            Actualmente estoy desarrollando el sitio web de PRATO_DO, una organización dedicada a la innovación alimentaria con enfoque social y sostenible. El sitio será un CMS multilenguaje, autogestionable y flexible, diseñado para visibilizar proyectos, compartir conocimiento y conectar con su comunidad. Esta colaboración me permite contribuir desde lo técnico a una iniciativa que busca generar un impacto real y transformador a través de la alimentación.
+            Organización dedicada a la innovación alimentaria con enfoque social y sostenible.
+
           </p>
+          <ul class="list-disc pl-5">
+            <li>CMS multilenguaje y autogestionable para visibilizar proyectos y compartir conocimiento.</li>
+            <li>Arquitectura flexible que facilita la gestión y el crecimiento futuro del contenido.</li>
+            <li>Contribución técnica con propósito: aportar a una iniciativa que busca generar impacto real a través de la alimentación.</li>
+          </ul>
           
           <a href="https://pratodo.org" target="_blank" class="mt-10 inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black hidden md:block">
             Ver Proyecto
           </a>
         </div>
-        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl px-6 lg:px-8 md:mt-0 mt-5">
           <img src="/img/pratodo.jpg" class="mx-auto w-full rounded-lg shadow-lg" alt="Plataforma PRATO_DO" width="768" height="432">
           <ul class="mt-10 flex flex-col gap-4">
             <li class="flex items-center gap-2">
@@ -185,6 +199,9 @@ const personalImageAlt = "Nacho Díaz"
           </p>
         </li>
       </ul>
+    </SectionContainer>
+    <SectionContainer id="contacto" class="py-12">
+      <ContactForm />
     </SectionContainer>
   </div>
   </main>
