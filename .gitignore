@@ -26,3 +26,4 @@ bun.*
 
 package-lock.json
 pnpm-lock.yaml
+.vercel
