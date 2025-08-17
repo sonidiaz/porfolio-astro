@@ -98,7 +98,7 @@ export const PROJECTS = [
     description:
       "Reproducción automática y configuración de audio con React.",
     link: "https://www.rtve.es/noticias/20231201/guerra-gaza-diario-testigo-incomodo/2462999.shtml",
-    image: "https://nachodiaz.me/wp-content/uploads/2024/01/gaza.gif",
+    image: "https://wordpress-845979-2915621.cloudwaysapps.com/wp-content/uploads/2024/01/gaza.gif",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
     github: ''
   },
@@ -108,7 +108,7 @@ export const PROJECTS = [
     description:
       "Minisitio desarrollado con React de 6 scrollytelling de texto, videos, ubicaciones y recorridos un un mapa con Mapbox. Gestión de reproducción de videos y audio.",
     link: "https://www.rtve.es/noticias/20240306/11m-mapa-especial-regreso-peor-dia-nuestras-vidas/15995328.shtml",
-    image: "https://nachodiaz.me/wp-content/uploads/2024/06/img2.rtve_.jpg",
+    image: "https://wordpress-845979-2915621.cloudwaysapps.com/wp-content/uploads/2024/06/img2.rtve_.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
     github: ''
   },
@@ -237,7 +237,7 @@ export const PROJECTS = [
     title: "Ya no me vienen con cuentos",
     description:
       highlightTechnologies("Desarrollo de sitio web con HTML, CSS y JavaScript para campaña de publicidad."),
-    link: "https://nachodiaz.me/trabajos/nomascuentos.cl",
+    link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/nomascuentos.cl",
     image: "/img/cuentos.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
     github: ''
@@ -247,7 +247,7 @@ export const PROJECTS = [
     title: "Familia Costa",
     description:
       "Prototipo de sitio web para campaña de marketing",
-    link: "https://nachodiaz.me/trabajos/famila-costa/",
+    link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/famila-costa/",
     image: "/img/familia-galletas.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
     github: ''
@@ -257,7 +257,7 @@ export const PROJECTS = [
     title: "Reutiliza",
     description:
       "Prototipo de sitio web para campaña de marketing",
-    link: "https://nachodiaz.me/trabajos/reutiliza/",
+    link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/reutiliza/",
     image: "/img/reutiliza.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
     github: ''
@@ -267,7 +267,7 @@ export const PROJECTS = [
     title: "Conciencia Celeste",
     description:
       "Prototipo de sitio web para campaña de marketing",
-    link: "https://nachodiaz.me/trabajos/conciencia-celeste/",
+    link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/conciencia-celeste/",
     image: "/img/conciencia.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
     github: ''
