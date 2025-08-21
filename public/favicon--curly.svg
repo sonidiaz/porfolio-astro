@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-labelledby="title desc" role="img">
+  <title id="title">Persona entre llaves</title>
+  <desc id="desc">Ícono minimalista para favicon: una silueta de persona dentro de llaves { }.</desc>
+
+  <!-- Llaves { } -->
+  <g fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Llave izquierda -->
+    <path d="M120 100c-40 0-40 40-40 40v80c0 20-20 20-20 20s20 0 20 20v80s0 40 40 40"/>
+    <!-- Llave derecha -->
+    <path d="M392 100c40 0 40 40 40 40v80c0 20 20 20 20 20s-20 0-20 20v80s0 40-40 40"/>
+  </g>
+
+  <!-- Persona -->
+  <g fill="currentColor">
+    <circle cx="256" cy="176" r="56"/>
+    <path d="M144 368c0-61.856 50.144-112 112-112s112 50.144 112 112v48H144z"/>
+  </g>
+</svg>

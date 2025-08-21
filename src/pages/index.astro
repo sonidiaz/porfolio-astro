@@ -36,13 +36,12 @@ const personalImageAlt = "Nacho Díaz"
       <Hero>
       </slot>
     </Hero>
-    </SectionContainer>
-    <SectionContainer id="sobre-mi" class="md:pt-[10rem] text-center pt-24">
+    </SectionContainer><SectionContainer id="sobre-mi" class="md:pt-[6rem] text-center py-24">
       <div class="flex w-full md:flex-row flex-col justify-start items-center h-full gap-10">
         <div class="flex-1">
           <AboutMe />
         </div>
-        <div class="flex-1 h-full">
+        <div class="flex-none h-full">
           <p class="text-6xl text-center font-bold text-gray-600 dark:text-gray-300">
             12 años
           </p>
@@ -58,7 +57,35 @@ const personalImageAlt = "Nacho Díaz"
         </div>
       </div>
     </SectionContainer>
-    
+    <SectionContainer id="aporte" class="pt-24 pb-20">
+      <TitleSection>
+      <Briefcase class="size-7 md:block hidden" />
+      ¿Cómo te puedo ayudar?
+      </TitleSection>
+      <ul class="flex flex-col gap-6 md:flex-row">
+        <li class="flex flex-col gap-4">
+          <EstrategiaIcon class="size-7" />
+          <h3 class="text-lg font-semibold leading-6">Estrategia tecnológica y de producto</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Te ayudo a definir la mejor ruta tecnológica para tu negocio. Aporto criterio estratégico y experiencia en implementación para tomar decisiones claras y efectivas que fortalezcan tu posición en el mercado y maximicen el impacto.
+          </p>
+        </li>
+        <li class="flex flex-col gap-4">
+          <InterfacesIcon class="size-7" />
+          <h3 class="text-lg font-semibold leading-6">Desarrollo e implementación de soluciones</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Diseño, construyo y optimizo experiencias digitales centradas en las personas. Desde interfaces claras y accesibles hasta integraciones más complejas, adapto la solución a la escala y necesidades de cada proyecto, ya sea para equipos pequeños o grandes empresas.
+          </p>
+        </li>
+        <li class="flex flex-col gap-4">
+          <SupervisionIcon class="size-7" />
+          <h3 class="text-lg font-semibold leading-6">Validación y calidad en el desarrollo</h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Integro inteligencia artificial en el proceso para generar código más rápido y eficiente, elevando los estándares de calidad, escalabilidad y rendimiento del producto final.
+          </p>
+        </li>
+      </ul>
+    </SectionContainer>  
     <SectionContainer id="trayectoria" class="py-24">
       <div class="">
         <div class="mx-auto max-w-1xl">
@@ -66,8 +93,8 @@ const personalImageAlt = "Nacho Díaz"
             <TrayectoriaIcon class="size-7 md:block hidden" />
             Mi trayectoria en tecnología y productos digitales
           </TitleSection>
-          <div class="pt-12">
-            <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto py-10">
+          <div class="">
+            <ul class="flex flex-col w-full gap-10 md:flex-row justify-center mx-auto">
               <li class="flex flex-col md:w-1/2 grow gap-4">
                 <p class="text-lg font-semibold leading-8 text-gray-900"> Desarrollo frontend con visión de usuario</p>
                 <p class="mt-1 text-lg leading-7 text-gray-600 dark:text-gray-300">
@@ -123,7 +150,7 @@ const personalImageAlt = "Nacho Díaz"
               <img class="max-h-12 w-full object-contain " src="https://wordpress-845979-2915621.cloudwaysapps.com/wp-content/uploads/2023/08/logoRTVE.png" alt="Transistor" width="165" height="48">
               <img class="max-h-8 w-full object-contain " src="https://raya.cl/wp-content/themes/raya/dist/img/logo-raya-dark.webp" alt="SavvyCal" width="165" height="42">
             </div>
-          <h3 class="text-center text-sm text-gray-900 font-semibold mt-10 ">Santiago de Chile, Madrid y Barcelona
+          <h3 class="text-center text-lg text-gray-900 font-semibold mt-10 ">Santiago de Chile, Madrid y Barcelona
           </h3>
         </div>
       </div>
@@ -170,35 +197,6 @@ const personalImageAlt = "Nacho Díaz"
           </a>
         </div>
       </div>
-    </SectionContainer>
-    <SectionContainer id="aporte" class="py-24">
-      <TitleSection>
-      <Briefcase class="size-7 md:block hidden" />
-      ¿Cómo puedo impulsar tu proyecto?
-      </TitleSection>
-      <ul class="flex flex-col gap-6 md:flex-row">
-        <li class="flex flex-col gap-4">
-          <EstrategiaIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Estrategia y optimización de producto</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Aporto mi experiencia para ayudar a definir la estrategia tecnológica y a tomar decisiones informadas, con el fin de mejorar la posición en el mercado y el impacto en el negocio.
-          </p>
-        </li>
-        <li class="flex flex-col gap-4">
-          <InterfacesIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Desarrollo y mejora de interfaces</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Diseño y optimizo experiencias digitales centradas en el usuario, asegurando que cada interacción sea efectiva, accesible y alineada con el propósito del producto.
-          </p>
-        </li>
-        <li class="flex flex-col gap-4">
-          <SupervisionIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Supervisión y validación de código</h3>
-          <p class="text-gray-600 dark:text-gray-400">
-            Junto con la IA genero código mejor y mas rápido, mejorando los estándares de calidad y rendimiento en el proceso de construcción del producto.
-          </p>
-        </li>
-      </ul>
     </SectionContainer>
     <SectionContainer id="contacto" class="py-12">
       <ContactForm />
