@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import HeroInterior from "@/components/HeroInterior.astro"
+import ContactForm from "@/components/ContactForm.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+---
+
+<Layout
+  title="Contacto | Nacho Díaz - Hablemos de tu proyecto"
+  description="¿Tienes un proyecto en mente? Cuéntame tu idea y exploremos cómo puedo ayudarte a hacerla realidad."
+>
+  <main class="px-4">
+    <SectionContainer class="pt-32">
+      <HeroInterior 
+        title="Hablemos de tu proyecto"
+        subtitle="Estrategia · Desarrollo · Resultados"
+        description="¿Tienes una idea en mente? Me especializo en transformar conceptos en soluciones digitales efectivas. Cuéntame tu idea y veamos juntos cómo hacerlo realidad."
+      />
+    </SectionContainer>
+    
+    <SectionContainer id="contacto" class="py-16">
+      <ContactForm />
+    </SectionContainer>
+  </main>
+</Layout>
