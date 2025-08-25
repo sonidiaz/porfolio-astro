@@ -19,7 +19,21 @@ const isValidEmail = (email: string): boolean => {
 export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.formData();
+    const name = data.get('name');
     const email = data.get('email');
+    const privacyConsent = data.get('privacy_consent');
+
+    // Validar campos requeridos
+    if (!name || typeof name !== 'string' || name.trim().length === 0) {
+      return new Response(JSON.stringify({
+        message: "El nombre es requerido"
+      }), {
+        status: 400,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+    }
 
     if (!email || typeof email !== 'string') {
       return new Response(JSON.stringify({
@@ -43,17 +57,30 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
+    if (!privacyConsent) {
+      return new Response(JSON.stringify({
+        message: "Debes aceptar el aviso legal y la política de privacidad"
+      }), {
+        status: 400,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+    }
+
     // Enviar email
     try {
       await transporter.sendMail({
         from: import.meta.env.EMAIL_USER,
         to: import.meta.env.EMAIL_TO,
-        subject: 'Nuevo contacto desde la web',
-        text: `Nuevo contacto recibido de: ${email}`,
+        subject: `Nuevo contacto desde la web - ${name}`,
+        text: `Nuevo contacto recibido de: ${name} (${email})`,
         html: `
           <h1>Nuevo contacto desde la web</h1>
-          <p>Email: ${email}</p>
-          <p>Fecha: ${new Date().toLocaleString()}</p>
+          <p><strong>Nombre:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Fecha:</strong> ${new Date().toLocaleString()}</p>
+          <p><strong>Acepta términos:</strong> Sí</p>
         `
       });
     } catch (error) {
@@ -68,17 +95,14 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
-    // Aquí puedes agregar la lógica que necesites:
-    // - Validar el email
-    // - Guardar en base de datos
-    // - Enviar notificación
-    console.log('Nuevo contacto:', email);
+    // Log del contacto recibido
+    console.log('Nuevo contacto:', { name: name.trim(), email });
 
     // Simulamos un pequeño delay para dar feedback al usuario
     await new Promise(resolve => setTimeout(resolve, 1000));
    
     return new Response(JSON.stringify({
-      message: "¡Gracias! Me pondré en contacto contigo pronto."
+      message: `¡Mensaje enviado correctamente! Gracias ${name.trim()}, me pondré en contacto contigo pronto.`
     }), {
       status: 200,
       headers: {

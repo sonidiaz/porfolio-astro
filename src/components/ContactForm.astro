@@ -40,23 +40,38 @@
   });
 </script>
 
-<div class="max-w-md mx-auto text-center">
-  <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">¿Tienes algo en mente?</h3>
-  <p class="text-lg mb-8 text-gray-600 dark:text-gray-300">
-   Si quieres deja tu correo y te contactaré.
-  </p>
-  
-  <form id="contact-form" class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+<div class="max-w-lg mx-auto text-center">
+  <form id="contact-form" class="flex flex-col gap-4 max-w-lg mx-auto">
+    <input
+      type="text"
+      name="name"
+      placeholder="Tu nombre"
+      required
+      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
     <input
       type="email"
       name="email"
       placeholder="tu@email.com"
       required
-      class="flex-1 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
+    
+    <div class="flex items-start gap-3 text-left">
+      <input
+        type="checkbox"
+        id="privacy-consent"
+        name="privacy_consent"
+        required
+        class="mt-1 h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded"
+      />
+      <label for="privacy-consent" class="text-sm text-gray-600 dark:text-gray-300">
+        Acepto que mis datos no serán almacenados ni utilizados para ningún otro fin que no sea contactarme en relación a mi consulta. Una vez atendida mi solicitud, la información proporcionada será eliminada.
+      </label>
+    </div>
     <button
       type="submit"
-      class="px-6 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+      class="w-full px-6 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
     >
       Contactar
     </button>
