@@ -24,14 +24,14 @@ const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
 <div class="mb-8 sticky top-28 md:top-14 z-10">
   <nav class="flex mad:flex-wrap gap-1 sm:justify-center mb-8 overflow-auto" id="categories-nav" data-initial-category={initialCategory}>
     <button 
-      class={`category-btn rounded-md px-2 py-1  bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
+      class={`category-btn text-md rounded-md px-2 py-1  bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
       data-category="all"
     >
       Todos
     </button>
     {CATEGORIES.map(category => (
       <button
-        class={`whitespace-nowrap rounded-md category-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${category === initialCategory ? 'active' : ''}`}
+        class={`whitespace-nowrap text-sm rounded-md category-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${category === initialCategory ? 'active' : ''}`}
         data-category={category}
       >
         {category === 'Experimentos' ? 'Marketing y prototipos' : category}
@@ -96,57 +96,74 @@ const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
 </div>
 
 <script>
-  const categoryButtons = document.querySelectorAll('.category-btn');
-  const projectsContainer = document.getElementById('projects-container');
-  const categoriesNav = document.getElementById('categories-nav');
-  const initialCategory = categoriesNav?.dataset.initialCategory;
+  function initializeProjectFilters() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const projectsContainer = document.getElementById('projects-container');
+    const categoriesNav = document.getElementById('categories-nav');
+    const initialCategory = categoriesNav?.dataset.initialCategory;
 
-  if (projectsContainer && initialCategory) {
-    const projects = projectsContainer.getElementsByTagName('article');
+    if (projectsContainer && initialCategory) {
+      const projects = projectsContainer.getElementsByTagName('article');
 
-    // Filtrar proyectos según la categoría inicial
-    Array.from(projects).forEach((project: Element) => {
-      const category = (project as HTMLElement).dataset.category;
-      if (initialCategory !== 'all' && category !== initialCategory) {
-        (project as HTMLElement).style.display = 'none';
-      }
-    });
-
-    categoryButtons.forEach((button: Element) => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        categoryButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-
-        const selectedCategory = (button as HTMLElement).dataset.category;
-
-        // Scroll suave al primer proyecto visible
-        const firstProject = Array.from(projects).find((project: Element) => {
-          return selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory;
-        });
-
-        Array.from(projects).forEach((project: Element) => {
-          if (selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory) {
-            (project as HTMLElement).style.display = '';
-          } else {
-            (project as HTMLElement).style.display = 'none';
-          }
-        });
-
-        // Si encontramos un proyecto, hacemos scroll hasta él
-        if (firstProject) {
-          const yOffset = -200; // Ajuste para compensar el header fijo
-          const y = firstProject.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-          window.scrollTo({
-            top: y,
-            behavior: 'smooth'
-          });
+      // Filtrar proyectos según la categoría inicial
+      Array.from(projects).forEach((project: Element) => {
+        const category = (project as HTMLElement).dataset.category;
+        if (initialCategory !== 'all' && category !== initialCategory) {
+          (project as HTMLElement).style.display = 'none';
         }
       });
-    });
+
+      // Limpiar event listeners previos para evitar duplicados
+      categoryButtons.forEach((button: Element) => {
+        const newButton = button.cloneNode(true);
+        button.parentNode?.replaceChild(newButton, button);
+      });
+
+      // Volver a obtener los botones después del clonado
+      const newCategoryButtons = document.querySelectorAll('.category-btn');
+      
+      newCategoryButtons.forEach((button: Element) => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          newCategoryButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+
+          const selectedCategory = (button as HTMLElement).dataset.category;
+
+          // Scroll suave al primer proyecto visible
+          const firstProject = Array.from(projects).find((project: Element) => {
+            return selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory;
+          });
+
+          Array.from(projects).forEach((project: Element) => {
+            if (selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory) {
+              (project as HTMLElement).style.display = '';
+            } else {
+              (project as HTMLElement).style.display = 'none';
+            }
+          });
+
+          // Si encontramos un proyecto, hacemos scroll hasta él
+          if (firstProject) {
+            const yOffset = -200; // Ajuste para compensar el header fijo
+            const y = firstProject.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({
+              top: y,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
   }
+
+  // Ejecutar cuando se carga la página
+  document.addEventListener("astro:page-load", initializeProjectFilters);
+  
+  // También ejecutar inmediatamente por compatibilidad
+  initializeProjectFilters();
 </script>
 
 <style>
