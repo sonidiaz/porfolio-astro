@@ -22,16 +22,16 @@ const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
 ---
 
 <div class="mb-8 sticky top-28 md:top-14 z-10">
-  <nav class="flex mad:flex-wrap gap-4 sm:justify-center mb-8 overflow-auto" id="categories-nav" data-initial-category={initialCategory}>
+  <nav class="flex mad:flex-wrap gap-1 sm:justify-center mb-8 overflow-auto" id="categories-nav" data-initial-category={initialCategory}>
     <button 
-      class={`category-btn px-2 py-1  bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
+      class={`category-btn rounded-md px-2 py-1  bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
       data-category="all"
     >
       Todos
     </button>
     {CATEGORIES.map(category => (
       <button
-        class={`whitespace-nowrap category-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${category === initialCategory ? 'active' : ''}`}
+        class={`whitespace-nowrap rounded-md category-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${category === initialCategory ? 'active' : ''}`}
         data-category={category}
       >
         {category === 'Experimentos' ? 'Marketing y prototipos' : category}
@@ -153,5 +153,26 @@ const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
   .category-btn.active {
     background-color: #077ea4;
     color: white;
+  }
+</style>
+
+<style>
+  button {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  button {
+    @apply dark:bg-gray-800/90 bg-white/85;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply dark:bg-gray-800/0 bg-white/0;
+    }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+    }
   }
 </style>
