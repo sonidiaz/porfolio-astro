@@ -3,7 +3,6 @@ import Layout from "@/layouts/Layout.astro"
 
 import HeroInterior from "@/components/HeroInterior.astro"
 import Briefcase from "@/components/icons/Briefcase.astro"
-import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import TitleSection from "@/components/TitleSection.astro"
 import TrayectoriaIcon from "@/components/icons/trayectoria.astro"
@@ -76,14 +75,21 @@ import TrayectoriaIcon from "@/components/icons/trayectoria.astro"
         </div>
       </div>
     </SectionContainer>
-    <SectionContainer id="proyectos" class="py-24">
-      <h2
-        class={`flex justify-center items-center mb-6  text-3xl font-semibold gap-x-3 text-black/80 dark:text-white`}
-      >
-      Proyectos en los que he participado
-      </h2>
 
-      <Projects initialCategory="Infografías" />
-    </SectionContainer>
+
+    <SectionContainer id="branding" class="py-24">
+      <div class="bg-white">
+        <div class="mx-auto max-w-1xl px-6 lg:px-8">
+          <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Consultoría, marketing y comunicación</h2>
+            <div class="mx-auto flex md:gap-0 gap-5 justify-center align-center mt-10 items-center sm:max-w lg:max-w-2xl">
+              <img class="max-h-9 mt-5 mb-7 w-full object-contain " src="https://www.indracompany.com/sites/all/themes/custom/indracompany_bs/logo.png" alt="Reform" width="165" height="44">
+              <img class="max-h-12 w-full object-contain " src="https://wordpress-845979-2915621.cloudwaysapps.com/wp-content/uploads/2023/08/logoRTVE.png" alt="Transistor" width="165" height="48">
+              <img class="max-h-8 w-full object-contain " src="https://raya.cl/wp-content/themes/raya/dist/img/logo-raya-dark.webp" alt="SavvyCal" width="165" height="42">
+            </div>
+          <h3 class="text-center text-lg text-gray-900 font-semibold mt-10 ">Santiago de Chile, Madrid y Barcelona
+          </h3>
+        </div>
+      </div>
+    </SectionContainer> 
   </main>
 </Layout>
