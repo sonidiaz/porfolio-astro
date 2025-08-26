@@ -1,4 +1,7 @@
 ---
+import GitHub from "@/components/icons/GitHub.astro"
+import LinkedIn from "@/components/icons/LinkedIn.astro"
+
 const navItems = [
   {
     title: "Inicio",
@@ -16,25 +19,64 @@ const navItems = [
     url: "/contacto",
   },
 ]
+
+const socialLinks = [
+  {
+    icon: GitHub,
+    url: "https://github.com/sonidiaz",
+    label: "GitHub",
+  },
+  {
+    icon: LinkedIn,
+    url: "https://www.linkedin.com/in/sonidiaz/",
+    label: "LinkedIn",
+  }
+]
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="w-full flex px-3 text-sm font-medium  text-gray-600 dark:text-gray-200 justify-center items-center gap-6"
   >
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block px-2 py-2 hover:text-yellow-500 "
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
+  <div class="lg:max-w-6xl w-full flex justify-between items-center md:flex-row flex-col">
+    <a
+    href="/"
+    class="flex items-center gap-2 font-bold text-gray-800 dark:text-white hover:text-yellow-500 transition-colors"
+  >
+    <span class="text-lg"><span class="text-grey-900 ">Nacho</span>Díaz</span>
+  </a>
+     <div class="nav-items flex items-center gap-4">
+     {
+       navItems.map((link) => (
+         <a
+           class="relative block px-2 py-2 hover:text-yellow-500 transition-colors"
+           aria-label={link.label}
+           href={link.url}
+         >
+           {link.title}
+         </a>
+       ))
+     }
+     
+     <div class="flex items-center gap-2 ml-4 border-l border-gray-300 dark:border-gray-600 pl-4">
+       {
+         socialLinks.map((social) => (
+           <a
+             href={social.url}
+             target="_blank"
+             rel="noopener noreferrer"
+             class="p-1 hover:text-yellow-500 transition-colors"
+             aria-label={social.label}
+           >
+             <social.icon class="w-5 h-5" />
+           </a>
+         ))
+       }
+     </div>
+   </div>
+  </div>
   </nav>
 </header>
 
