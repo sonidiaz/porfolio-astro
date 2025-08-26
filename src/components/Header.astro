@@ -14,6 +14,11 @@ const navItems = [
     url: "/experiencia",
   },
   {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/proyectos",
+  },
+  {
     title: "Contacto",
     label: "contacto",
     url: "/contacto",
@@ -60,7 +65,7 @@ const socialLinks = [
        ))
      }
      
-     <div class="flex items-center gap-2 ml-4 border-l border-gray-300 dark:border-gray-600 pl-4">
+     <div class="flex hidden md:block md:flex items-center gap-2 ml-4 border-l border-gray-300 dark:border-gray-600 pl-4">
        {
          socialLinks.map((social) => (
            <a
