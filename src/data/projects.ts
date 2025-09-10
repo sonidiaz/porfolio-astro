@@ -155,7 +155,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "CMS para PRATO_DO",
     description:
-      highlightTechnologies("Actualmente me encuentro desarrollando el sitio web de PRATO_DO usando WordPress y React, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación."),
+      highlightTechnologies("Actualmente me encuentro desarrollando el sitio web de PRATO_DO usando Next.Js, Payload CMS y PostgreSQL, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación."),
     link: "https://pratodo.org",
     image: "/img/pratodo_do.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -166,7 +166,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "Citizens.legal",
     description:
-      highlightTechnologies("Plataforma web desarrollada con WordPress que permite a los usuarios armar y gestionar sus propios casos, cargando documentos y siguiendo contenido guiado. Se personalizaron reglas de privacidad y seguridad, se automatizaron procesos clave usando Make.com, logrando ahorrar tiempo operativo y mejorar la experiencia del usuario."),
+      highlightTechnologies("Funcionalidades extras implementadas mediante WordPress y la API de LearnDash, utilizando los hooks de cada tecnología. Configuración del servidor en Cloudways para garantizar un rendimiento y escalabilidad óptimos. Automatización de procesos clave utilizando Make.com, mejorando la eficiencia en la gestión de documentos."),
     link: "",
     image: "/img/citizens.legal.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -199,7 +199,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "BergMedical",
     description:
-      highlightTechnologies("Desarrollo de frontend con integración de WooCommerce usando WordPress como CMS headless. Renderizado SSR de productos, UI con MUI, y despliegue continuo automatizado (CI) con ramas main y develop. Implementación de endpoint en Node.js para envío de formularios vía SMTP y botón de WhatsApp con contenido dinámico basado en el producto."),
+      highlightTechnologies("Desarrollo de sitio en Next.js con integración de WooCommerce como Headless CMS. Implementación de SSR (Server-Side Rendering) para optimizar SEO y rendimiento. Creación de un sistema CI/CD con despliegue automático en Vercel. Desarrollo de un botón dinámico de WhatsApp, que prellenada el mensaje con información del producto."),
     link: "https://bergmedical-f3u5szigo-sonidiaz.vercel.app",
     image: "/img/bergmedical.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
@@ -210,7 +210,7 @@ export const PROJECTS = [
     cat: "Desarrollo web",
     title: "La Cabrera.eco",
     description:
-      highlightTechnologies("Sitio web desarrollado con WordPress y React como plataforma para dar a conocer los servicios y productos que tiene LaCabrera.eco para fomentar y dinamizar la economía local de los pueblos y promover la sostenibilidad de comunidades locales."),
+      highlightTechnologies("Sitio web desarrollado con WordPress como plataforma para dar a conocer los servicios y productos que tiene LaCabrera.eco para fomentar y dinamizar la economía local de los pueblos y promover la sostenibilidad de comunidades locales."),
     link: "https://lacabrera.eco",
     image: "/img/la-cabrera.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
