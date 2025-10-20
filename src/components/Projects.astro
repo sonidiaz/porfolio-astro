@@ -21,17 +21,17 @@ function shuffleArray(array: any[]) {
 const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
 ---
 
-<div class="mb-8 sticky top-20 md:top-11 z-10">
-  <nav class="flex mad:flex-wrap gap-4 sm:justify-center mb-8 overflow-auto" id="categories-nav" data-initial-category={initialCategory}>
+<div class="mb-8 sticky top-28 md:top-14 z-10">
+  <nav class="flex mad:flex-wrap gap-1 sm:justify-center mb-8 overflow-auto" id="categories-nav" data-initial-category={initialCategory}>
     <button 
-      class={`category-btn px-2 py-1  bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
+      class={`category-btn text-md rounded-md px-2 py-1  bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${initialCategory === 'all' ? 'active' : ''}`}
       data-category="all"
     >
       Todos
     </button>
     {CATEGORIES.map(category => (
       <button
-        class={`whitespace-nowrap category-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${category === initialCategory ? 'active' : ''}`}
+        class={`whitespace-nowrap text-sm rounded-md category-btn px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors ${category === initialCategory ? 'active' : ''}`}
         data-category={category}
       >
         {category === 'Experimentos' ? 'Marketing y prototipos' : category}
@@ -42,7 +42,7 @@ const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
 
 <div class="flex flex-wrap justify-between gap-y-16" id="projects-container">
   {
-    SHUFFLED_PROJECTS.map(({ image, title, description, tags, link, github, cat }) => (
+    SHUFFLED_PROJECTS.map(({ image, title, description, tags, link, github, cat, client }) => (
       <article class="flex flex-col md:w-1/3 px-3" data-category={cat}>
         <div class="w-full">
           {image !== '' && (
@@ -56,6 +56,9 @@ const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
           <h3 class="text-2xl text-gray-800 dark:text-gray-100 pt-2">
             {title}
           </h3>
+          <p class="text-yellow-700 dark:text-yellow-400">
+            {client}
+          </p>
           <div class="flex flex-wrap mt-2">
             {/* <ul class="flex flex-row mb-2 gap-x-2">
                 {tags.map((tag) => (
@@ -96,62 +99,100 @@ const SHUFFLED_PROJECTS = shuffleArray(PROJECTS);
 </div>
 
 <script>
-  const categoryButtons = document.querySelectorAll('.category-btn');
-  const projectsContainer = document.getElementById('projects-container');
-  const categoriesNav = document.getElementById('categories-nav');
-  const initialCategory = categoriesNav?.dataset.initialCategory;
+  function initializeProjectFilters() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const projectsContainer = document.getElementById('projects-container');
+    const categoriesNav = document.getElementById('categories-nav');
+    const initialCategory = categoriesNav?.dataset.initialCategory;
 
-  if (projectsContainer && initialCategory) {
-    const projects = projectsContainer.getElementsByTagName('article');
+    if (projectsContainer && initialCategory) {
+      const projects = projectsContainer.getElementsByTagName('article');
 
-    // Filtrar proyectos según la categoría inicial
-    Array.from(projects).forEach((project: Element) => {
-      const category = (project as HTMLElement).dataset.category;
-      if (initialCategory !== 'all' && category !== initialCategory) {
-        (project as HTMLElement).style.display = 'none';
-      }
-    });
-
-    categoryButtons.forEach((button: Element) => {
-      button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        categoryButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-
-        const selectedCategory = (button as HTMLElement).dataset.category;
-
-        // Scroll suave al primer proyecto visible
-        const firstProject = Array.from(projects).find((project: Element) => {
-          return selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory;
-        });
-
-        Array.from(projects).forEach((project: Element) => {
-          if (selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory) {
-            (project as HTMLElement).style.display = '';
-          } else {
-            (project as HTMLElement).style.display = 'none';
-          }
-        });
-
-        // Si encontramos un proyecto, hacemos scroll hasta él
-        if (firstProject) {
-          const yOffset = -200; // Ajuste para compensar el header fijo
-          const y = firstProject.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-          window.scrollTo({
-            top: y,
-            behavior: 'smooth'
-          });
+      // Filtrar proyectos según la categoría inicial
+      Array.from(projects).forEach((project: Element) => {
+        const category = (project as HTMLElement).dataset.category;
+        if (initialCategory !== 'all' && category !== initialCategory) {
+          (project as HTMLElement).style.display = 'none';
         }
       });
-    });
+
+      // Limpiar event listeners previos para evitar duplicados
+      categoryButtons.forEach((button: Element) => {
+        const newButton = button.cloneNode(true);
+        button.parentNode?.replaceChild(newButton, button);
+      });
+
+      // Volver a obtener los botones después del clonado
+      const newCategoryButtons = document.querySelectorAll('.category-btn');
+      
+      newCategoryButtons.forEach((button: Element) => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          newCategoryButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+
+          const selectedCategory = (button as HTMLElement).dataset.category;
+
+          // Scroll suave al primer proyecto visible
+          const firstProject = Array.from(projects).find((project: Element) => {
+            return selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory;
+          });
+
+          Array.from(projects).forEach((project: Element) => {
+            if (selectedCategory === 'all' || (project as HTMLElement).dataset.category === selectedCategory) {
+              (project as HTMLElement).style.display = '';
+            } else {
+              (project as HTMLElement).style.display = 'none';
+            }
+          });
+
+          // Si encontramos un proyecto, hacemos scroll hasta él
+          if (firstProject) {
+            const yOffset = -200; // Ajuste para compensar el header fijo
+            const y = firstProject.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({
+              top: y,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
   }
+
+  // Ejecutar cuando se carga la página
+  document.addEventListener("astro:page-load", initializeProjectFilters);
+  
+  // También ejecutar inmediatamente por compatibilidad
+  initializeProjectFilters();
 </script>
 
 <style>
   .category-btn.active {
     background-color: #077ea4;
     color: white;
+  }
+</style>
+
+<style>
+  button {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  button {
+    @apply dark:bg-gray-800/90 bg-white/85;
+  }
+
+  @keyframes nav-shadown {
+    0% {
+      @apply dark:bg-gray-800/0 bg-white/0;
+    }
+    to {
+      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+    }
   }
 </style>

@@ -14,6 +14,11 @@ const navItems = [
     url: "/experiencia",
   },
   {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/proyectos",
+  },
+  {
     title: "Contacto",
     label: "contacto",
     url: "/contacto",
@@ -41,9 +46,9 @@ const socialLinks = [
     class="w-full flex px-3 text-sm font-medium  text-gray-600 dark:text-gray-200 justify-center items-center gap-6"
   >
   <div class="lg:max-w-6xl w-full flex justify-between items-center md:flex-row flex-col">
-    <a
+  <a
     href="/"
-    class="flex items-center gap-2 font-bold text-gray-800 dark:text-white hover:text-yellow-500 transition-colors"
+    class="flex py-4 md:py-3 items-center gap-2 font-bold text-gray-800 dark:text-white hover:text-yellow-500 transition-colors"
   >
     <span class="text-lg"><span class="text-grey-900 ">Nacho</span>Díaz</span>
   </a>
@@ -60,7 +65,7 @@ const socialLinks = [
        ))
      }
      
-     <div class="flex items-center gap-2 ml-4 border-l border-gray-300 dark:border-gray-600 pl-4">
+     <div class="flex hidden md:block md:flex items-center gap-2 ml-4 border-l border-gray-300 dark:border-gray-600 pl-4">
        {
          socialLinks.map((social) => (
            <a
@@ -81,46 +86,30 @@ const socialLinks = [
 </header>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+  function setActiveNavItem() {
+    const navItems = document.querySelectorAll("header nav a[aria-label]");
+    const currentPath = window.location.pathname;
 
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
-            } else {
-              item.classList.remove("text-yellow-500")
-            }
-          })
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.9,
-    })
-
-    sections.forEach((section) => {
-      observer.observe(section)
-    })
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect()
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section)
-        })
+    navItems.forEach((item) => {
+      const itemUrl = item.getAttribute("href") || "";
+      
+      // Remove active class from all items
+      item.classList.remove("text-yellow-500");
+      
+      // Add active class to current page
+      if (itemUrl === currentPath || 
+          (currentPath === "/" && itemUrl === "/") ||
+          (currentPath.startsWith(itemUrl) && itemUrl !== "/")) {
+        item.classList.add("text-yellow-500");
       }
-    }
-  })
+    });
+  }
+
+  // Set active nav item on page load
+  document.addEventListener("astro:page-load", setActiveNavItem);
   
+  // Also run immediately for direct page access
+  setActiveNavItem();
 </script>
 
 <style>

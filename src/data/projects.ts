@@ -61,6 +61,7 @@ export const PROJECTS = [
     image: "https://img2.rtve.es/i/?w=1600&i=01745579621311.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
     github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -70,7 +71,8 @@ export const PROJECTS = [
     link: "https://www.rtve.es/noticias/20241005/muertes-palestinos-victimas-guerra-gaza-israel/16274312.shtml",
     image: "https://img.rtve.es/i/ano-guerra-gaza_01728057628100.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -80,7 +82,8 @@ export const PROJECTS = [
     link: "https://www.rtve.es/deportes/20240729/resumen-mountain-bike-juegos-olimpicos-paris-2024/16202036.shtml",
     image: "https://img2.rtve.es/i/?w=1600&i=01722270780057.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -90,7 +93,8 @@ export const PROJECTS = [
     link: "https://www.rtve.es/noticias/20240725/gran-mapa-playas-espana-buscador/16164854.shtml",
     image: "https://img2.rtve.es/i/?w=1600&i=01721834516789.jpg",
     tags: [TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -100,7 +104,8 @@ export const PROJECTS = [
     link: "https://www.rtve.es/noticias/20231201/guerra-gaza-diario-testigo-incomodo/2462999.shtml",
     image: "https://wordpress-845979-2915621.cloudwaysapps.com/wp-content/uploads/2024/01/gaza.gif",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -110,7 +115,8 @@ export const PROJECTS = [
     link: "https://www.rtve.es/noticias/20240306/11m-mapa-especial-regreso-peor-dia-nuestras-vidas/15995328.shtml",
     image: "https://wordpress-845979-2915621.cloudwaysapps.com/wp-content/uploads/2024/06/img2.rtve_.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -120,7 +126,8 @@ export const PROJECTS = [
     link: "https://www.rtve.es/noticias/20231215/visita-mercado-cena-navidad-aun-mas-cara-este-ano/2467151.shtml",
     image: "/img/img-apertura.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -130,7 +137,8 @@ export const PROJECTS = [
     link: "https://www.rtve.es/noticias/20230928/productos-alimentos-mas-desperdiciados-espana/2456540.shtm",
     image: "/img/desperdicios.gif",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Infografías",
@@ -140,37 +148,41 @@ export const PROJECTS = [
     link: "https://www.rtve.es/noticias/20230817/composicion-congreso-diputados/2453798.shtml",
     image: "/img/filtro-diputados.gif",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'RTVE'
   },
   {
     cat: "Desarrollo web",
     title: "CMS para PRATO_DO",
     description:
-      highlightTechnologies("Actualmente me encuentro desarrollando el sitio web de PRATO_DO usando WordPress y React, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación."),
+      highlightTechnologies("Actualmente me encuentro desarrollando el sitio web de PRATO_DO usando Next.Js, Payload CMS y PostgreSQL, una organización dedicada a la innovación alimentaria, con el objetivo de mejorar la calidad de vida de las personas a través de soluciones sostenibles, creativas y conscientes centradas en la alimentación."),
     link: "https://pratodo.org",
     image: "/img/pratodo_do.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'PRATO_DO'
   },
   {
     cat: "Desarrollo web",
     title: "Citizens.legal",
     description:
-      highlightTechnologies("Plataforma web desarrollada con WordPress que permite a los usuarios armar y gestionar sus propios casos, cargando documentos y siguiendo contenido guiado. Se personalizaron reglas de privacidad y seguridad, se automatizaron procesos clave usando Make.com, logrando ahorrar tiempo operativo y mejorar la experiencia del usuario."),
+      highlightTechnologies("Funcionalidades extras implementadas mediante WordPress y la API de LearnDash, utilizando los hooks de cada tecnología. Configuración del servidor en Cloudways para garantizar un rendimiento y escalabilidad óptimos. Automatización de procesos clave utilizando Make.com, mejorando la eficiencia en la gestión de documentos."),
     link: "",
     image: "/img/citizens.legal.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Citizens.legal'
   },
   {
     cat: "Desarrollo web",
-    title: "Comunidades Beforget",
+    title: "Comunidades de aprendizaje",
     description:
       highlightTechnologies("Integración con la API de Slack, desarrollo de página de filtrado por categorías y términos usando React, y personalización del dashboard de usuario con carruseles para eventos, sesiones y proyectos. Creación de plugin personalizado con WordPress para gestionar proyectos y sesiones, con filtros por términos ODS."),
     link: "https://thesocialcircle.es/login/",
     image: "/img/bfg-comunidades.gif",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Beforget'
   },
   {
     cat: "Desarrollo web",
@@ -180,27 +192,30 @@ export const PROJECTS = [
     link: "https://aesiguenza.es",
     image: "/img/aes.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'AES'
   },
   {
     cat: "Desarrollo web",
     title: "BergMedical",
     description:
-      highlightTechnologies("Desarrollo de frontend con integración de WooCommerce usando WordPress como CMS headless. Renderizado SSR de productos, UI con MUI, y despliegue continuo automatizado (CI) con ramas main y develop. Implementación de endpoint en Node.js para envío de formularios vía SMTP y botón de WhatsApp con contenido dinámico basado en el producto."),
+      highlightTechnologies("Desarrollo de sitio en Next.js con integración de WooCommerce como Headless CMS. Implementación de SSR (Server-Side Rendering) para optimizar SEO y rendimiento. Creación de un sistema CI/CD con despliegue automático en Vercel. Desarrollo de un botón dinámico de WhatsApp, que prellenada el mensaje con información del producto."),
     link: "https://bergmedical-f3u5szigo-sonidiaz.vercel.app",
     image: "/img/bergmedical.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'BergMedical'
   },
   {
     cat: "Desarrollo web",
     title: "La Cabrera.eco",
     description:
-      highlightTechnologies("Sitio web desarrollado con WordPress y React como plataforma para dar a conocer los servicios y productos que tiene LaCabrera.eco para fomentar y dinamizar la economía local de los pueblos y promover la sostenibilidad de comunidades locales."),
+      highlightTechnologies("Sitio web desarrollado con WordPress como plataforma para dar a conocer los servicios y productos que tiene LaCabrera.eco para fomentar y dinamizar la economía local de los pueblos y promover la sostenibilidad de comunidades locales."),
     link: "https://lacabrera.eco",
     image: "/img/la-cabrera.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'LaCabrera.eco'
   },
   {
     cat: "Experimentos",
@@ -210,7 +225,8 @@ export const PROJECTS = [
     link: "",
     image: "/img/glocalhack.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: 'https://github.com/sonidiaz/univhack22'
+    github: 'https://github.com/sonidiaz/univhack22',
+    client: 'Beforget'
   },
   {
     cat: "Experimentos",
@@ -220,7 +236,8 @@ export const PROJECTS = [
     link: "https://weather-data-app.vercel.app",
     image: "/img/wheatherapp.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Weather App'
   },
   {
     cat: "Experimentos",
@@ -230,7 +247,8 @@ export const PROJECTS = [
     link: "https://bfg-smile-ll5lf599n.now.sh",
     image: "/img/bfg-sonrisa.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Beforget'
   },
   {
     cat: "Experimentos",
@@ -240,7 +258,8 @@ export const PROJECTS = [
     link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/nomascuentos.cl",
     image: "/img/cuentos.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Boutique Creativa Carcavilla'
   },
   {
     cat: "Experimentos",
@@ -250,7 +269,8 @@ export const PROJECTS = [
     link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/famila-costa/",
     image: "/img/familia-galletas.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Agencia Raya'
   },
   {
     cat: "Experimentos",
@@ -260,7 +280,8 @@ export const PROJECTS = [
     link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/reutiliza/",
     image: "/img/reutiliza.jpg",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Agencia Raya'
   },
   {
     cat: "Experimentos",
@@ -270,6 +291,7 @@ export const PROJECTS = [
     link: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/conciencia-celeste/",
     image: "/img/conciencia.png",
     tags: [TAGS.REACT, TAGS.CSS, TAGS.HTML],
-    github: ''
+    github: '',
+    client: 'Agencia Raya'
   }
 ]
