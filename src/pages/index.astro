@@ -9,6 +9,7 @@ import Briefcase from "@/components/icons/Briefcase.astro"
 import EstrategiaIcon from "@/components/icons/Estrategia.astro"
 import InterfacesIcon from "@/components/icons/Interfaces.astro"
 import SupervisionIcon from "@/components/icons/Supervision.astro"
+import SystemIcon from "@/components/icons/System.astro"
 import ReactIcon from "@/components/icons/React.astro"
 import NextJSIcon from "@/components/icons/NextJS.astro"
 // import PayloadCMSIcon from "@/components/icons/PayloadCMS.astro"
@@ -25,74 +26,98 @@ const personalImageAlt = "Nacho Díaz"
   description="Desarrollador y programador web con 10 años de experiencia en desarrollo de frontend y backend. Aporto mi experiencia técnica, empatía y criterio para ayudar a equipos a crear productos coherentes, útiles y sostenibles."
 >
   <main class="px-4">
-    <SectionContainer class="pt-32 pb-12">
+    <SectionContainer class="py-32" fullWidth>
       <Hero />
     </SectionContainer>
-    
-    <SectionContainer id="sobre-mi" class="md:pt-[6rem] text-center py-2 md:py-24">
-      <div class="flex w-full md:flex-row flex-col justify-start items-center h-full gap-10">
-        <div class="flex-1">
-          <AboutMe />
-        </div>
-        <div class="flex-1 h-full">
-          <p class="text-6xl text-center font-bold text-gray-600 dark:text-gray-300">
-            12 años
-          </p>
-          <p class="text-6xl text-center font-bold text-gray-500 dark:text-gray-300">
-            2 países
-          </p>
-          <p class="text-6xl text-center font-bold text-gray-400 dark:text-gray-300">
-            3 ciudades
-          </p>
-          <p class="text-6xl text-center font-bold text-gray-300 dark:text-gray-300">
-            1 pueblo
-          </p>
-        </div>
-      </div>
-    </SectionContainer>
-    <SectionContainer id="aporte" class="pt-32 pb-20">
-      <TitleSection>
-      <Briefcase class="size-7 md:block hidden" />
-      ¿Cómo te puedo ayudar?
-      </TitleSection>
-      <ul class="flex flex-col gap-6 md:flex-row">
+    <SectionContainer id="aporte" class="pt-22 pb-20">
+      <h2
+        class={`flex items-center justify-center mb-16 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white`}
+      >
+       Desarrollo y consultoría tecnológica
+      </h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <li class="flex flex-col gap-4">
-          <EstrategiaIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Estrategia tecnológica y de producto</h3>
+          <div class="flex items-center gap-2">
+            <EstrategiaIcon class="size-7" />
+            <h3 class="text-lg font-semibold leading-6">Metodología + Arquitectura</h3>
+          </div>
           <p class="text-gray-600 dark:text-gray-400">
-            Defino la mejor ruta tecnológica para tu negocio, aportando criterio y experiencia para tomar decisiones claras y efectivas.
+            Definir ruta técnica y de producto para tu proyecto. Analizo tus necesidades de negocio para diseñar una arquitectura escalable y elegir el stack tecnológico más adecuado. Te ayudo a tomar decisiones técnicas fundamentadas que ahorren tiempo y recursos a largo plazo.
           </p>
         </li>
         <li class="flex flex-col gap-4">
-          <InterfacesIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Desarrollo e implementación de soluciones</h3>
+          <div class="flex items-center gap-2">
+            <InterfacesIcon class="size-7" />
+            <h3 class="text-lg font-semibold leading-6">Desarrollo & despliegue</h3>
+          </div>
           <p class="text-gray-600 dark:text-gray-400">
-            Diseño y construyo experiencias digitales útiles y escalables, adaptadas a las necesidades de cada proyecto.
+            Front, backend, IA, APIs, integraciones. Desarrollo soluciones completas usando tecnologías modernas como React, Next.js, Node.js y Php. Implemento desde interfaces de usuario intuitivas hasta sistemas backend robustos, incluyendo integración de IA y conexiones con servicios externos.
           </p>
         </li>
         <li class="flex flex-col gap-4">
-          <SupervisionIcon class="size-7" />
-          <h3 class="text-lg font-semibold leading-6">Validación y calidad en el desarrollo</h3>
+          <div class="flex items-center gap-2">
+            <SupervisionIcon class="size-7" />
+            <h3 class="text-lg font-semibold leading-6">Validación de producto</h3>
+          </div>
+          </div>
           <p class="text-gray-600 dark:text-gray-400">
-            Uso IA para acelerar el desarrollo y asegurar productos de alta calidad, escalables y con buen rendimiento.
+            Pruebas, prototipos, feedback de usuario. Creo MVPs y prototipos funcionales para validar ideas antes de la inversión completa. Implemento sistemas de testing automatizado y metodologías para recoger feedback real de usuarios, asegurando que el producto final resuelva problemas reales.
+          </p>
+        </li>
+        <li class="flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <SystemIcon class="size-7" />
+            <h3 class="text-lg font-semibold leading-6">Mantenimiento & crecimiento</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400">
+            Cuando tu producto está en marcha, asegurar calidad, performance y evolución. Monitoreo continuo del rendimiento, optimización de código y bases de datos, y escalado de infraestructura según las necesidades. Implemento nuevas funcionalidades y mejoras basadas en el comportamiento real de los usuarios.
           </p>
         </li>
       </ul>
     </SectionContainer>  
-
+    
+    <SectionContainer id="sobre-mi" class="md:pt-[6rem] text-center py-2 md:py-24 h-full">
+      <div class="flex w-full md:flex-row flex-col justify-between h-full gap-10">
+        <div class="flex flex-col w-full justify-around h-full">
+          <AboutMe />   
+          <div class="w-full items-start gap-10 h-full">
+            <div class="flex-1 h-4/5">
+              <p class="text-6xl md:text-8xl text-right font-bold text-gray-600 dark:text-gray-300">
+                12 años
+              </p>
+              <p class="text-6xl md:text-8xl text-right font-bold text-gray-500 dark:text-gray-300">
+                2 países
+              </p>
+              <p class="text-6xl md:text-8xl text-right font-bold text-gray-400 dark:text-gray-300">
+                3 ciudades
+              </p>
+              <p class="text-6xl md:text-8xl text-right font-bold text-gray-300 dark:text-gray-300">
+                1 pueblo
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class=" h-full">
+          <img  
+        src="/foto-nacho.jpg" 
+        alt={personalImageAlt} class="order-1 object-cover w-full md:w-full h-full p-1 md:order-2 rounded-xl top-0 md:top-[13rem] lg:top-0 relative" style="">
+        </div>
+      </div>
+    </SectionContainer>
+  
     <SectionContainer fullWidth id="call-to-action" class="py-16">
-      <div class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-24 text-center">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          ¿Tienes un proyecto en mente?
-        </h2>
-        <a 
-          href="/contacto" 
-          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-yellow-600 text-white font-semibold rounded-xl hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
-        >
-          Conversemos
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
+      <div class="bg-yellow-100 rounded-2xl p-8 md:p-24 text-center">
+        <hgroup class="w-[100%] ">
+          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            ¿Tienes un proyecto en mente?
+          </h2>
+          <h3 class="text-2xl md:max-w-screen-lg mx-auto text-gray-900 dark:text-white mb-4 text-center">
+            Ese MVP que quieres hacer crecer, o el prototipo que necesitas validar rápido, puedo ayudarte a desarrollarlo y convertirlo en un producto funcional.
+          </h3>
+        </hgroup>
+        
+        <a href="/contacto" class="w-fit mt-8 hover:bg-gray-700 md:inline-block bg-yellow-500 text-white px-4 py-2 rounded-md">
+          ¿Conversemos?
         </a>
       </div>
     </SectionContainer>
