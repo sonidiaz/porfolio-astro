@@ -1,6 +1,8 @@
 # Vercel
 .vercel/
 
+spacs/
+
 # build output
 dist/
 
@@ -27,3 +29,4 @@ bun.*
 package-lock.json
 pnpm-lock.yaml
 .vercel
+
