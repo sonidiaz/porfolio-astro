@@ -82,41 +82,42 @@ const personalImageAlt = "Nacho Díaz"
           <AboutMe />   
           <div class="w-full items-start gap-10 h-full">
             <div class="flex-1 h-4/5">
-              <p class="text-6xl md:text-8xl text-right font-bold text-gray-600 dark:text-gray-300">
+              <p class="text-6xl md:text-8xl whitespace-nowrap text-right font-bold text-gray-600 dark:text-gray-300">
                 12 años
               </p>
-              <p class="text-6xl md:text-8xl text-right font-bold text-gray-500 dark:text-gray-300">
+              <p class="text-6xl md:text-8xl whitespace-nowrap text-right font-bold text-gray-500 dark:text-gray-300">
                 2 países
               </p>
-              <p class="text-6xl md:text-8xl text-right font-bold text-gray-400 dark:text-gray-300">
+              <p class="text-6xl md:text-8xl whitespace-nowrap text-right font-bold text-gray-400 dark:text-gray-300">
                 3 ciudades
               </p>
-              <p class="text-6xl md:text-8xl text-right font-bold text-gray-300 dark:text-gray-300">
+              <p class="text-6xl md:text-8xl whitespace-nowrap text-right font-bold text-gray-300 dark:text-gray-300">
                 1 pueblo
               </p>
             </div>
           </div>
         </div>
-        <div class=" h-full">
+        <div class=" h-full justify-start items-start flex">
           <img  
         src="/foto-nacho.jpg" 
-        alt={personalImageAlt} class="order-1 object-cover w-full md:w-full h-full p-1 md:order-2 rounded-xl top-0 md:top-[13rem] lg:top-0 relative" style="">
+        alt={personalImageAlt} class="order-1 object-cover w-full h-full md:order-2 rounded-xl top-0 md:top-[13rem] lg:top-0 relative" style="">
         </div>
       </div>
     </SectionContainer>
   
     <SectionContainer fullWidth id="call-to-action" class="py-16">
-      <div class="bg-yellow-100 rounded-2xl p-8 md:p-24 text-center">
-        <hgroup class="w-[100%] ">
-          <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <div class="bg-yellow-100 rounded-2xl p-8 md:p-24 text-center bg-[url('/img/bg-forest.jpeg')] bg-cover bg-center bg-no-repeat relative">
+        <div class="absolute inset-0 bg-black/50 rounded-2xl"></div>
+        <hgroup class="w-[100%] relative z-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-white dark:text-white mb-4">
             ¿Tienes un proyecto en mente?
           </h2>
-          <h3 class="text-2xl md:max-w-screen-lg mx-auto text-gray-900 dark:text-white mb-4 text-center">
+          <h3 class="md:text-2xl text-lg md:max-w-screen-lg mx-auto text-white dark:text-white md:mb-4 mb-12 text-center">
             Ese MVP que quieres hacer crecer, o el prototipo que necesitas validar rápido, puedo ayudarte a desarrollarlo y convertirlo en un producto funcional.
           </h3>
         </hgroup>
         
-        <a href="/contacto" class="w-fit mt-8 hover:bg-gray-700 md:inline-block bg-yellow-500 text-white px-4 py-2 rounded-md">
+        <a href="/contacto" class="relative z-10 w-fit mt-8 hover:bg-gray-700 md:inline-block bg-yellow-500 text-white px-4 py-2 rounded-md">
           ¿Conversemos?
         </a>
       </div>
